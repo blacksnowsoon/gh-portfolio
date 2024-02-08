@@ -1,12 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-function InputField({field, form, ...props}) {
+function InputField ({ field, form, ...props }) {
   
   const { label } = props
-
-  
-  
   const { touched, errors } = form
 
   return (

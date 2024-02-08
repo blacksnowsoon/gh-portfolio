@@ -4,25 +4,42 @@ import { Field, Form, Formik, useFormikContext } from 'formik';
 import Section from './Section';
 import InputField from './InputField';
 import TextArea from './TextArea';
-
-
+import { contactSchema } from '../general/Validation';
+import emailjs from '@emailjs/browser'
 
 function ContactForm() {
+
+
   const onSubmit = (values, actions) => {
-    setTimeout(() => {
-      console.log(JSON.stringify(values, null, 2))
+    console.log('actions', actions)
+    const service_id = 'service_gh_mailer'
+    const template_id = 'contact_form'
+    const publicKey = 'kW68NtHPmP4o2a8mL'
+    const emailTemplate = {
+      user_name: values?.name,
+      user_email: values?.email,
+      message: values?.message,
+      subject: values?.subject
+    }
+    emailjs.send(service_id, template_id,emailTemplate, publicKey)
+    .then(res => {
+      console.log('respons', res)
+      actions.setStatus(...res)
       actions.setSubmitting(false)
       actions.resetForm()
-    }, 1000);
+    })
+    .catch(err => {
+      actions.setErrors(...err)
+      actions.setSubmitting(false)
+    })
   }
   return (
-    <Section title="Contact Me" style={['']} id={'contact'}>
+    <Section title="Contact Me" id={'contact'}>
       
         <Formik 
           initialValues={{ name: '', email: '', subject: '', message: '' }} 
           onSubmit={onSubmit}
-          validate={{
-          }} 
+          validationSchema={contactSchema} 
         >
           {
             () => (
@@ -73,9 +90,9 @@ export default ContactForm
 
 const SubmitBtn = () => {
 
-  const {isSubmitting, errors, } = useFormikContext()
+  const {isSubmitting, status, errors } = useFormikContext()
   
-  
+  console.log('status', status)
   return (
     <div className='flex items-center gap-1 duration-700 flex-col'>
       <button 
@@ -94,7 +111,10 @@ const SubmitBtn = () => {
         
       </button>
       {
-        errors? <p className='text-red-500'>Error</p> : null
+        errors ? <p className='text-red-500'></p> : null
+      }
+      {
+        status ? <p className='text-red-500'></p> : null
       }
     </div>
   )
