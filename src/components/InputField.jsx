@@ -3,7 +3,7 @@ import React from 'react'
 
 function InputField({field, form, ...props}) {
   
-  const { containerStyle, inputStyle, label } = props
+  const { label } = props
 
   
   

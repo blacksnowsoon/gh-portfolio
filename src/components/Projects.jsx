@@ -61,22 +61,26 @@ const imgName = card?.image
   return (
     <Link
       className={`
-      scale-90
-      shadow-md
+      shadow-2xl
       shadow-white
       drop-shadow
-      outline outline-2 outline-slate-300  
-      cursor-pointer h-80
-      hover:scale-105 transition-all 
-      relative
+      outline outline-1
+      outline-slate-300  
+      cursor-pointer 
+      hover:scale-105 transition-all
       `} 
       to={card.link}
       target='_blank'
       >
-      <img src={`./${imgName}`} alt={card.name} className=' rounded-md absolute w-full h-full scale-105 -z-10 opacity-40 hover:opacity-70' />
-      <div className='text-slate-100 p-2 space-y-4 h-full'>
+      <div className='text-slate-100 relative h-60 overflow-clip'>
+        <img 
+          src={`/${imgName}`} 
+          alt={card.name} 
+          className=' 
+          rounded-md absolute inset-0 w-full h-full 
+          -z-10 opacity-40 hover:opacity-70' />
         <h2 className=' text-xl text-center text-yellow-600 font-semibold'>{card.name}</h2>
-        <p className='text-justify hover:bg-slate-900 p-2' >{card.shorts}</p>
+        <p className='text-justify hover:bg-slate-900 p-2 h-full' >{card.shorts}</p>
       </div>
     </Link>
   )

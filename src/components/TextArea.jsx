@@ -1,9 +1,7 @@
 
 function TextArea({field, form, ...props}) {
-  const { containerStyle, inputStyle, label } = props
+  const { label } = props
 
-  const parentStyle =  (containerStyle && typeof(containerStyle) !== 'string') ? [...containerStyle].join(' ') : containerStyle
-  const childStyle =  (inputStyle && typeof(inputStyle) !== 'string') ? [...inputStyle].join(' ') : inputStyle
   
   const { touched, errors } = form
   
