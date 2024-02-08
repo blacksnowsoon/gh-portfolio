@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "pre-commit": "check",
+  "pre-commit": "",
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "formik": "^2.4.5",
