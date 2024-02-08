@@ -5,13 +5,12 @@ function InputField({field, form, ...props}) {
   
   const { containerStyle, inputStyle, label } = props
 
-  const parentStyle =  (containerStyle && typeof(containerStyle) !== 'string') ? [...containerStyle].join(' ') : containerStyle
-  const childStyle =  (inputStyle && typeof(inputStyle) !== 'string') ? [...inputStyle].join(' ') : inputStyle
+  
   
   const { touched, errors } = form
 
   return (
-    <div className={parentStyle}>
+    <div>
       <label className='block'>
         {
           label
@@ -19,7 +18,7 @@ function InputField({field, form, ...props}) {
       <input 
         {...field} 
         {...props}
-        className={childStyle} 
+        className={'block w-full p-2 rounded-lg'} 
         />
       </label>
       {

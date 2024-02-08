@@ -31,33 +31,28 @@ function ContactForm() {
                 name={'name'}
                 placeholder={'Your Name'}
                 label={'Name'}
-                containerStyle={[]}
-                inputStyle={['block', 'w-full', 'p-2', 'rounded-lg']}
                 component={InputField}
-                required={'true'}
+                required={true}
               />
               <Field 
                 name={'email'}
                 placeholder={'Your Email'}
                 label={'Email'}
-                containerStyle={[]}
-                inputStyle={['block', 'w-full', 'p-2', 'rounded-lg']}
+                required={true}
                 component={InputField} 
               />
               <Field 
                 name={'subject'}
                 placeholder={'Subject'}
                 label={'Subject'}
-                containerStyle={[]}
-                inputStyle={['block', 'w-full', 'p-2', 'rounded-lg']}
+                required={true}
                 component={InputField} 
               />
               <Field 
                 name={'message'}
                 placeholder={'Your Message'}
                 label={'Message'}
-                containerStyle={[]}
-                inputStyle={['block', 'w-full', 'p-2', 'rounded-lg']}
+                required={true}
                 component={TextArea} 
               />
               <SubmitBtn />

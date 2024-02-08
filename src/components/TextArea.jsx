@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
 
 function TextArea({field, form, ...props}) {
   const { containerStyle, inputStyle, label } = props
@@ -10,12 +8,12 @@ function TextArea({field, form, ...props}) {
   const { touched, errors } = form
   
   return (
-    <div className={parentStyle}>
+    <div>
       <label className='block'>
         {
           label
         }
-      <textarea {...field} className={childStyle}/>
+      <textarea {...field} className={'block w-full p-2 rounded-lg'}/>
       </label>
       {
         touched[field.name] && errors[field.name] ?
