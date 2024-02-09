@@ -35,7 +35,6 @@ function ContactForm() {
   }
   return (
     <Section title="Contact Me" id={'contact'}>
-      
         <Formik 
           initialValues={{ name: '', email: '', subject: '', message: '' }} 
           onSubmit={onSubmit}
