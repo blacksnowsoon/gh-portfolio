@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import Section from './Section'
+import Article from './Article'
 
 
 const logos = [
@@ -44,11 +44,11 @@ function Platforms() {
     )
   }
   return (
-    <Section title={'Platforms & Libs'} id={'platforms'}>
+    <Article title={'Platforms & Libs'} id={'platforms'}>
       {
         logosList()
       }
-    </Section>
+    </Article>
   )
 }
 

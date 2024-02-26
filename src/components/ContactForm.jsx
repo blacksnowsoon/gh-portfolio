@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Field, Form, Formik, useFormikContext } from 'formik';
-import Section from './Section';
+import Article from './Article';
 import InputField from './InputField';
 import TextArea from './TextArea';
 import { contactSchema } from '../general/Validation';
@@ -34,52 +34,50 @@ function ContactForm() {
     })
   }
   return (
-    <Section title="Contact Me" id={'contact'}>
-        <Formik 
-          initialValues={{ name: '', email: '', subject: '', message: '' }} 
-          onSubmit={onSubmit}
-          validationSchema={contactSchema} 
-        >
-          {
-            () => (
-            <Form className='bg-slate-200 flex gap-4 p-4 max-w-lg mx-auto flex-col rounded-lg'>
-              <Field
-                name={'name'}
-                placeholder={'Your Name'}
-                label={'Name'}
-                component={InputField}
-                required={true}
-              />
-              <Field 
-                name={'email'}
-                placeholder={'Your Email'}
-                label={'Email'}
-                required={true}
-                component={InputField} 
-              />
-              <Field 
-                name={'subject'}
-                placeholder={'Subject'}
-                label={'Subject'}
-                required={true}
-                component={InputField} 
-              />
-              <Field 
-                name={'message'}
-                placeholder={'Your Message'}
-                label={'Message'}
-                required={true}
-                component={TextArea} 
-              />
-              <SubmitBtn />
-            </Form>
-            )
-          }
-        
-        </Formik>
-
+    <Article title="Contact Me" id={'contact'}>
+      <Formik 
+        initialValues={{ name: '', email: '', subject: '', message: '' }} 
+        onSubmit={onSubmit}
+        validationSchema={contactSchema} 
+      >
+        {
+          () => (
+          <Form className='bg-slate-200 flex gap-4 p-4 max-w-lg mx-auto flex-col rounded-lg'>
+            <Field
+              name={'name'}
+              placeholder={'Your Name'}
+              label={'Name'}
+              component={InputField}
+              required={true}
+            />
+            <Field 
+              name={'email'}
+              placeholder={'Your Email'}
+              label={'Email'}
+              required={true}
+              component={InputField} 
+            />
+            <Field 
+              name={'subject'}
+              placeholder={'Subject'}
+              label={'Subject'}
+              required={true}
+              component={InputField} 
+            />
+            <Field 
+              name={'message'}
+              placeholder={'Your Message'}
+              label={'Message'}
+              required={true}
+              component={TextArea} 
+            />
+            <SubmitBtn />
+          </Form>
+          )
+        }
       
-    </Section>
+      </Formik>
+    </Article>
   )
 }
 

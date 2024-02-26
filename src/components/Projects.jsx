@@ -1,42 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, {} from 'react'
-import Section from './Section'
+import Article from './Article'
 import { Link } from 'react-router-dom'
+import { data as cards } from '../Data'
 
 
-const cards = [
-  {
-    name: 'casher bill',
-    image: 'bill.jpg',
-    shorts: 'Design and create a small app for a business ciycle of the casher procedures for an orgnaization ',
-    link: 'https://casher-bill.vercel.app/'
-  },
-  {
-    name: 'static website',
-    image: 'isfp.png',
-    shorts: 'Using Vitejs with Reactjs to redesign the ISFP website with no prebuilt components just react and react-router-dom package.',
-    link: 'https://isfp-redesign.vercel.app/'
-  },
-  {
-    name: 'A workshop full website',
-    image: 'work-shop.png',
-    shorts: 'An API for resizing Images based on params width & height',
-  },
-  {
-    name: 'Reasize Image API',
-    image: 'resize.png',
-    shorts: 'An API for resizing Images based on params width & height',
-  },
-  {
-    name: 'Landing Page',
-    image: 'landingPage.png',
-    shorts: 'build a dynamic navigation bar based on how many section in the page',
-    link: 'https://landing-page-udacity-fwd.vercel.app/'
-  }
-]
 function Projects() {
   return (
-    <Section title={'Projects'} id={'projects'} style={''}>
+    <Article title={'Projects'} id={'projects'} style={''}>
       <ul className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4'>
         {
           cards.map((card, index) =>{
@@ -48,7 +19,7 @@ function Projects() {
           })
         }
       </ul>
-    </Section>
+    </Article>
   )
 }
 
@@ -69,8 +40,8 @@ const imgName = card?.image
       cursor-pointer 
       hover:scale-105 transition-all
       `} 
-      to={card.link}
-      target='_blank'
+      to={`project/${card.id}`}
+      card={card}
       >
       <div className='text-slate-100 relative h-60 overflow-clip'>
         <img 

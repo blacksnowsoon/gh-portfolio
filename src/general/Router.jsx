@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-
 import { RoutePaths } from "./RoutePaths.jsx";
 import { Home } from "../Pages/Home.jsx";
 import { NotFound } from "./NotFound.jsx";

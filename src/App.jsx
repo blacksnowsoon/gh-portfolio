@@ -16,9 +16,9 @@ export const App = () => (
         </PageWithHeader>
       }
     >
-        <div className="h-full">
+        <main className="bg-slate-950 min-h-screen">
           <Router/>
-        </div>
+        </main>
         
     </Suspense>
   </BrowserRouter>
