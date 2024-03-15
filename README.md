@@ -31,11 +31,3 @@ Preview:
 ```bash
 npm run preview
 ```
-
-## Deploy on zCloud
-
-Create your account at [zcloud.ws](https://zcloud.ws).
-
-Connect to your GitHub, create your app and done!
-
-Push to Deploy.

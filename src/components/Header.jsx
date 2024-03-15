@@ -9,7 +9,7 @@ function Header() {
                     lg:flex-row lg:text-left bg-slate-950">
 
       <div className="flex items-center pl-4 gap-2 flex-1 ">
-          <img className="w-9 " src="/logo-1-250x250.png" alt="gh logo"/>
+          <img className="w-9 " src="/gh-logo-600x600.png" alt="gh logo"/>
           <h2 className=" tracking-tight">
             <span className="block text-white">Js Developer</span>
           </h2>

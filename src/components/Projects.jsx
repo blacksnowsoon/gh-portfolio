@@ -2,13 +2,13 @@
 import React, {} from 'react'
 import Article from './Article'
 import { Link } from 'react-router-dom'
-import { data as cards } from '../Data'
+import { PROJECTS as cards } from '../Data'
 
 
 function Projects() {
   return (
     <Article title={'Projects'} id={'projects'} style={''}>
-      <ul className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4'>
+      <ul className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  gap-2'>
         {
           cards.map((card, index) =>{
             return (
@@ -30,29 +30,22 @@ const PorjectCard = (props) =>{
   const { card } = props
 const imgName = card?.image
   return (
-    <Link
-      className={`
-      shadow-2xl
-      shadow-white
-      drop-shadow
-      outline outline-1
-      outline-slate-300  
-      cursor-pointer 
-      hover:scale-105 transition-all
-      `} 
-      to={`project/${card.id}`}
-      card={card}
-      >
-      <div className='text-slate-100 relative h-60 overflow-clip'>
-        <img 
+    <div
+      className={'col-span-1 flex flex-col h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'} 
+      to={`project/${card.id}`}>
+      <img 
           src={`/${imgName}`} 
           alt={card.name} 
-          className=' 
-          rounded-md absolute inset-0 w-full h-full 
-          -z-10 opacity-40 hover:opacity-70' />
-        <h2 className=' text-xl text-center text-yellow-600 font-semibold'>{card.name}</h2>
-        <p className='text-justify hover:bg-slate-900 p-2 h-full' >{card.shorts}</p>
+          className='w-full aspect-square object-cover object-left-top rounded-t-lg' />
+          
+      <div className='p-5 rounded-b-lg  h-full flex flex-col justify-between'>
+        <h5 className='mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white'>{card.name}</h5>
+        <p className='mb-3 font-normal text-gray-700 dark:text-gray-400' >{card.shorts}</p>
+        <Link to={`project/${card.id}`} className='inline-flex items-center place-self-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
+          Read more
+          <img src={'/arrowforward.svg'} className='w-4 h-4 ml-2'/>
+        </Link>
       </div>
-    </Link>
+    </div>
   )
 }

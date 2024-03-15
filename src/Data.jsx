@@ -1,5 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 //# sourceMappingURL=Data.jsx.map
-export const data = [
+export const PROJECTS = [
   {
     id:1,
     name: 'Casher Bill',
@@ -49,5 +50,38 @@ export const data = [
     link: 'https://image-resize-api.vercel.app/',
     usedLibs: ['Nodejs', 'sharpe'],
     functions: ['reading files', 'writing files', ],
+  }
+]
+
+export const CERTIFICATS = [
+  {
+    id:1,
+    name: 'JavaScript',
+    pdf: '/certificates/javascript.png',
+  },
+  {
+    id:2,
+    name: 'SQL',
+    pdf: '/certificates/sql.png',
+  },
+  {
+    id:3,
+    name: 'React',
+    pdf: '/certificates/react-2.png',
+  },
+  {
+    id:4,
+    name: 'Frontend',
+    pdf: '/certificates/frontEnd.png',
+  },
+  {
+    id:5,
+    name: 'HTML - CSS',
+    pdf: '/certificates/HTML.png',
+  },
+  {
+    id:6,
+    name: 'React',
+    pdf: '/certificates/react-1.png',
   }
 ]

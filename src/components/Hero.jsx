@@ -5,9 +5,9 @@ export const Hero = () => {
   return (
     <div className="bg-[url('/bg1.jpg')] bg-cover bg-no-repeat h-screen bg-center bg-fixed flex items-center justify-center">
       <div className="flex flex-col justify-center items-center">
-        <img src="/logo-1-250x250.png" alt="logo" className="w-16 h-14 animate-pulse" />
+        <img src="/gh-logo-600x600.png" alt="logo" className="w-16 h-14 animate-pulse" />
         <h2 className="text-white font-extrabold text-4xl md:text-4xl">
-            <span className="block">Gharieb Khalifa</span>
+            <span className="block">gharieb khalifa</span>
         </h2>
         <h2 className="text-white text-center text-lg ">
           <span>Systems Analyst</span>
