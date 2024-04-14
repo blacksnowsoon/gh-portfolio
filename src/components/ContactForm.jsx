@@ -93,7 +93,7 @@ const SubmitBtn = () => {
     <div className='flex items-center gap-1 duration-700 flex-col'>
       <button 
         type='submit' 
-        className='w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+        className='w-full bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none text-white font-bold py-2 px-4 rounded'
         disabled={isSubmitting || status === 'submitted'}
         >
         {
