@@ -1,20 +1,20 @@
 /* eslint-disable react-refresh/only-export-components */
-//# sourceMappingURL=Data.jsx.map
+//# sourceMappingURL=Data.js.map
 export const PROJECTS = [
   {
     id:1,
     name: 'Casher Bill',
-    image: 'bill.jpg',
+    image: 'bill-375x475.png',
     shorts: 'A small app for a adabia casher bill includes some queries and reports, built from scratch.',
     description: 'Analyising the casher cycle and build an app working locally using indexed DB with all features as login system, multi users, reports, printing bills, export bills as PDF, export reports as CSV ',
     usedLibs: ['Vitejs-react', 'Dexie-js', 'date-fns', 'Jspdf', 'React-csv', 'React-datepicker', 'React-hook-form', 'html2canvas'],
-    functions: ['Login users', 'printing', 'Querying', 'exporting Data as CSV & PDF'],
+    functions: ['Login users', 'printing', 'Querying Data from DB', 'exporting Data as CSV & PDF', 'form validation', 'apply animations', 'CRUD'],
     link: 'https://casher-bill.vercel.app/'
   },
   {
     id:2,
     name: 'Static Website',
-    image: 'isfp.png',
+    image: 'isfp-375x475.png',
     shorts: 'Using Vitejs-React to redesign the ISFP website with no prebuilt components just react and react-router-dom package.',
     description: 'giving the wibsite of the company where I am working a new responsive SPA design with theme option',
     usedLibs: ['Vitejs-react', 'react-router-hash-link'],
@@ -24,7 +24,7 @@ export const PROJECTS = [
   {
     id:3,
     name: 'A workshop website',
-    image: 'work-shop.png',
+    image: 'workShop-375x475.png',
     shorts: 'A website for small aluminum workshop to be as a protfolio and catalogue.',
     description: 'A small website that has a dashoard lets the owner to add his content with full control plus some statistics with a good UI that lets users signin and save theme favorate kitchens ability to contact the brand with whats app or via direct call.',
     usedLibs: ['reactjs', 'firebase', 'firestore', 'firebase storage', 'prop-types', 'react-query', 'react-hook-form'],
@@ -34,22 +34,32 @@ export const PROJECTS = [
   {
     id:4,
     name: 'Landing Page',
-    image: 'landingPage.png',
+    image: 'landing-375x475.png',
     shorts: 'build a landing responsive page with a dynamic navigation bar based on created sections in the page',
     description: 'It is static responsve page with an dynamic nav bar creates a links to all the sections in the page based on the section tag with the id assign a home link to the hero section and footer to the footer',
-    usedLibs: [],
-    functions: [],
+    usedLibs: ['no Libs just js vanila', 'css', 'html'],
+    functions: ['responsive design', 'dynamic nav bar', 'manipulating DOM'],
     link: 'https://landing-page-udacity-fwd.vercel.app/',
   },
   {
     id: 5,
-    name: 'Reasize Image API',
-    image: 'resize.png',
-    shorts: 'An API for resizing Images based on params width & height',
-    description: 'An Rest-Full API ',
-    link: 'https://image-resize-api.vercel.app/',
-    usedLibs: ['Nodejs', 'sharpe'],
-    functions: ['reading files', 'writing files', ],
+    name: 'Image Reducer API',
+    image: 'api-375x475.png',
+    shorts: 'This API allows you to resize images by specifying the desired width and height as a search params and a payload is the image base64 format',
+    description: 'The Image Reduce API provides a simple and convenient way to resize images by providing the desired width and height along with the base64 encoded image file',
+    link: 'https://github.com/blacksnowsoon/Image-Reducer-Api',
+    usedLibs: ['Nodejs', 'sharpe', 'express', 'cors'],
+    functions: ['reading files', ],
+  },
+  {
+    id: 6,
+    name: 'Image Reducer Web App',
+    image: 'image-resizer-375x475.png',
+    shorts: 'Simple web app to resize images by providing the desired width and height along with the image file',
+    description: 'The Image Reducer Web App provides a simple and convenient way to resize images by providing the desired width and height along with the image file',
+    link: 'https://image-reducer-ui.vercel.app/',
+    usedLibs: ['Reactjs', 'axios'],
+    functions: ['responsive design', 'dark mode', 'scroll up', 'animation', 'validating input', 'fetching data', 'Submting data'],
   }
 ]
 
