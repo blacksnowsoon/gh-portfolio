@@ -15,6 +15,12 @@ module.exports = {
           xl: '5rem',
           '2xl': '5rem'
         }
+      },
+      dropShadow: {
+        custom: '0 0 16px rgba(255, 165, 0, 0.5)'
+      },
+      filter: {
+        'grayscale': 'grayscale(100%)'
       }
     },
   },
