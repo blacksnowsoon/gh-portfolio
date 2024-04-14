@@ -16,12 +16,12 @@ function Project() {
         id={id} 
         title={card.name} 
         style={''}>
-          <div className='flex flex-1 flex-row gap-2'>
-            <div className="flex-1 ">
+          <div className='flex flex-wrap -mx-4'>
+            <div className="w-full lg:w-1/2 px-4 mb-8">
               <img src={`/${card.image}`} alt={card.name} 
-                className="w-full h-full aspect-square"/>
+                className="w-full rounded shadow-lg"/>
             </div>
-            <div className='flex-1 justify-between text-white p-2 flex flex-col'>
+            <div className='flex flex-col justify-between w-full lg:w-1/2 px-4 mb-8  text-white p-2 '>
               <div>
                 <p className=" ">
                   {card.shorts}
@@ -39,7 +39,7 @@ function Project() {
               </a>
             </div>
           </div>
-        </Article>
+      </Article>
     )
   },[params])
   return (
