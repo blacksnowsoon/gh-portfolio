@@ -1,7 +1,8 @@
 import {Suspense} from 'react';
 import {BrowserRouter} from 'react-router-dom';
-import {Router} from './general/Router.jsx';
+import { Router } from './general/Router.jsx';
 import {Loading} from './components/Loading.jsx';
+import Header from './components/Header';
 
 export const PageWithHeader = ({children}) => (
   <div className="flex h-full flex-col">{children}</div>
@@ -16,9 +17,10 @@ export const App = () => (
         </PageWithHeader>
       }
     >
-        <main className="bg-slate-950 min-h-screen">
-          <Router/>
-        </main>
+      <Header/>
+      <main >
+        <Router/>
+      </main>
         
     </Suspense>
   </BrowserRouter>
