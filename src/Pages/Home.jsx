@@ -1,16 +1,16 @@
-import ContactForm from "../components/ContactForm";
-import Hero from "../components/Hero";
-import Platforms from "../components/Platforms";
-import Projects from "../components/Projects";
-import PageContent from "./PageContent";
+import Hero from "../components/sections/Hero";
+import Projects from "../components/sections/Projects";
+import Platforms from "../components/sections/Platforms";
 import Certificates from "../components/sections/Certificates";
+import ContactForm from "../components/sections/ContactForm";
+
 
 export const Home = () => (
-  <PageContent>
+  <>
     <Hero />
     <Projects />
     <Platforms />
     <Certificates />
     <ContactForm />
-  </PageContent>
+  </>
 );

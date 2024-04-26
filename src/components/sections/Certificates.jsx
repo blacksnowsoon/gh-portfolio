@@ -1,6 +1,7 @@
-import Article from '../Article'
-import { CERTIFICATS } from '../../Data'
 import { useMemo } from 'react'
+import { CERTIFICATS } from '../../Data'
+import Section from '../Section'
+import Article from '../Article'
 
 function Certificates() {
 
@@ -17,11 +18,13 @@ function Certificates() {
     )
   }
   return (
-    <Article id={'certificates'} title={"Wall Of Certificates"} style=''>
-      {
-        certificatesList()
-      }
-    </Article>
+    <Section id={'certificates'}>
+      <Article title={"Wall Of Certificates"} style=''>
+        {
+          certificatesList()
+        }
+      </Article>
+    </Section>
   )
 }
 
