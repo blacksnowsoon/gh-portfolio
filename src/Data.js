@@ -60,6 +60,16 @@ export const PROJECTS = [
     link: 'https://image-reducer-ui.vercel.app/',
     usedLibs: ['React', 'axios'],
     functions: ['responsive design', 'display mode', 'scroll up', 'animation', 'validating input', 'fetching data', 'Submting data'],
+  },
+  {
+    id: 7,
+    name: 'POS Retail System',
+    image: 'pos375x475.png',
+    shorts: 'Desktop web based Application POS system with full inventory management',
+    description: 'A desktop web based application work locally for retail stores with full inventory management and order management',
+    link: '#contact',
+    usedLibs: ['HTML', 'CSS', 'jQuery', 'Bootstrap', 'electron', 'nodejs', 'DataTable',],
+    functions: ['NoSQL', 'users & Permissions', 'bills history', 'sorting', 'Export data CSV','Export data PDF', 'stock alarm', 'Standalone app'],
   }
 ]
 
