@@ -20,7 +20,7 @@ function Project() {
           <div className='flex flex-wrap -mx-4 '>
             <div className="w-full lg:w-1/2 px-4 mb-8 sm:w-96 sm:mx-auto">
               <img src={`/${card.image}`} alt={card.name} 
-                className="w-full rounded shadow-lg"/>
+                className=" rounded shadow-lg"/>
             </div>
             <div className='flex flex-col justify-between w-full lg:w-1/2 px-4 mb-8  text-white p-2 '>
               <div>
