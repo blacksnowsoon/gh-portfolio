@@ -12,10 +12,10 @@ function Header() {
           </div>
           <div className="">
             <ul className="flex items-center gap-4 justify-center ">
-              <li key={'projects'}><a href="/#projects" className="text-white hover:text-gray-300 ">Projects</a></li>
-              <li key={'platforms'}><a href="/#platforms" className="text-white hover:text-gray-300 ">Platforms</a></li>
-              <li key={'certificates'}><a href="/#certificates" className="text-white hover:text-gray-300">Certificates</a></li>
-              <li key={'contact'}><a href="/#contact" className="text-white hover:text-gray-300">Contact</a></li>
+              <li key={'projects'}><a href="#projects" className="text-white hover:text-gray-300 ">Projects</a></li>
+              <li key={'platforms'}><a href="#platforms" className="text-white hover:text-gray-300 ">Platforms</a></li>
+              <li key={'certificates'}><a href="#certificates" className="text-white hover:text-gray-300">Certificates</a></li>
+              <li key={'contact'}><a href="#contact" className="text-white hover:text-gray-300">Contact</a></li>
             </ul>
           </div>
         </div>

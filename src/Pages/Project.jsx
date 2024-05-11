@@ -35,7 +35,7 @@ function Project() {
                 <Ul data={card.usedLibs} title={'Platforms & Libs'} />
                 <Ul data={card.functions} title={"Features"} />
               </div>
-              <a className='outline outline-1 text-center p-2  bg-orange-500 hover:bg-orange-700 rounded-lg focus:ring-4 focus:outline-none sm:mt-2' href={card.link} rel='noreferrer' target='_blank'>
+              <a className='outline outline-1 text-center p-2  bg-orange-500 hover:bg-orange-700 rounded-lg focus:ring-4 focus:outline-none sm:mt-2' href={card.link} rel='noreferrer' target={card.link.includes('http') ? '_blank' : '_self'}>
                 Check it Out
               </a>
             </div>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { PROJECTS as cards } from '../../Data'
 import Section from '../Section'
 import Article from '../Article'
+import { useNavigate } from 'react-router-dom';
 
 
 function Projects() {
@@ -32,11 +33,12 @@ export default Projects
 
 const PorjectCard = (props) =>{
   const { card } = props
-const imgName = card?.image
+  const imgName = card?.image
+  
   return (
     <div
       className={'relative max-w-md max-h-96 mx-auto rounded overflow-hidden shadow shadow-orange-500 cursor-pointer'} 
-      to={`project/${card.id}`}>
+>
       <img 
           src={`/${imgName}`} 
           alt={card.name} 

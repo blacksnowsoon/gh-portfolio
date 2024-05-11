@@ -29,7 +29,7 @@ export const PROJECTS = [
     description: 'A small website that has a dashoard lets the owner to add his content with full control plus some statistics with a good UI that lets users signin and save theme favorate kitchens ability to contact the brand with whats app or via direct call.',
     usedLibs: ['reactjs', 'firebase', 'firestore', 'firebase storage', 'prop-types', 'react-query', 'react-hook-form'],
     functions: ['google Signin', 'creating admin dashboard','reading files', 'upload images', 'validating forms', 'save user data', 'paginate', 'firebase hosting', 'authorization'],
-    link: 'https://workshop-full-website.vercel.app/',
+    link: 'https://ahmedsaied.web.app/',
   },
   {
     id:4,
@@ -64,10 +64,10 @@ export const PROJECTS = [
   {
     id: 7,
     name: 'POS Retail System',
-    image: 'pos375x475.png',
+    image: 'pos-375x475.png',
     shorts: 'Desktop web based Application POS system with full inventory management',
     description: 'A desktop web based application work locally for retail stores with full inventory management and order management',
-    link: '#contact',
+    link: '/#contact',
     usedLibs: ['HTML', 'CSS', 'jQuery', 'Bootstrap', 'electron', 'nodejs', 'DataTable',],
     functions: ['NoSQL', 'users & Permissions', 'bills history', 'sorting', 'Export data CSV','Export data PDF', 'stock alarm', 'Standalone app'],
   }
