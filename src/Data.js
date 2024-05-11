@@ -64,7 +64,7 @@ export const PROJECTS = [
   {
     id: 7,
     name: 'POS Retail System',
-    image: 'pos-375x375.png',
+    image: 'pos-375x475.png',
     shorts: 'Desktop web based Application POS system with full inventory management',
     description: 'A desktop web based application work locally for retail stores with full inventory management and order management',
     link: '/#contact',
