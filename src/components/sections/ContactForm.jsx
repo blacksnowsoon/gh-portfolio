@@ -39,14 +39,15 @@ function ContactForm() {
         <h3 className="animate-pass text-center text-green-400 block text-xl font-bold  text-nowrap  ">
         Priorities:👉 Performance🚀  Accuracy🔬  Responsiveness🎭 
         </h3>
-      <Article style="flex gap-4 rounded-lg ">
-        <div className="mx-auto max-w-lg flex-col overflow-clip rounded-lg bg-slate-200">
-          <img title="performance mobile" src="/mobileVersion.jpeg" alt="performance mobile" className="transition-all hover:scale-150 hover:-translate-y-5" />
+        <div className='container flex flex-col md:flex-row gap-2'>
+          <div className=" overflow-clip rounded-lg bg-slate-200">
+            <img title="performance mobile" src="/mobileVersion.jpeg" alt="performance mobile" className="transition-all hover:scale-150 hover:-translate-y-5" />
+          </div>
+          <div className=" overflow-clip rounded-lg bg-slate-200">
+            <img title="performance desktop" src="/desktopVersion.jpeg" alt="performance desktop " className='transition-all hover:scale-150 hover:-translate-y-5' />
+          </div>
+          
         </div>
-        <div className="mx-auto max-w-lg flex-col overflow-clip rounded-lg bg-slate-200">
-          <img title="performance desktop" src="/desktopVersion.jpeg" alt="performance desktop " className='transition-all hover:scale-150 hover:-translate-y-5' />
-        </div>
-      </Article>
       <Article title="Contact Me">
         <Formik
           initialValues={{ name: "", email: "", subject: "", message: "" }}
