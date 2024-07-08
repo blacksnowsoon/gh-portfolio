@@ -3,6 +3,16 @@
 export const PROJECTS = [
   {
     id:1,
+    name: 'Dashboard Template',
+    image: 'go-starter-project375x375.png',
+    shorts: 'A starter project Template supports RTL and Responsive with dynamic sidebar',
+    description: 'A starter Project for dashboard support RTL for whom wants to start a new project, can be user as system dashboard or admin dashboard.',
+    usedLibs: ['Vitejs-react', 'mui/icons-material', 'mui/material', 'history', 'i18next', 'date-fns', 'react-helmet-async', 'stylis'],
+    functions: ['nice search bar', 'dynamic sidebar', 'coockie message', 'RTL & LTR layout'],
+    link: 'https://go-starter-project.vercel.app/'
+  },
+  {
+    id:2,
     name: 'Casher Bill',
     image: 'bill1-375x475.png',
     shorts: 'A small web app for the casher of adabia port include login system, queries and reports, built from scratch.',
@@ -12,7 +22,7 @@ export const PROJECTS = [
     link: 'https://casher-bill.vercel.app/'
   },
   {
-    id:2,
+    id:3,
     name: 'Static Website',
     image: 'isfp-375x475.png',
     shorts: 'Using Vitejs-React to redesign the ISFP website with no prebuilt components just react and react-router-dom package.',
@@ -22,7 +32,7 @@ export const PROJECTS = [
     link: 'https://isfp-redesign.vercel.app/',
   },
   {
-    id:3,
+    id:4,
     name: 'A workshop website',
     image: 'workShop-375x475.png',
     shorts: 'A website for small aluminum workshop to be as a protfolio and catalogue.',
@@ -32,7 +42,7 @@ export const PROJECTS = [
     link: 'https://ahmedsaied.web.app/',
   },
   {
-    id:4,
+    id:5,
     name: 'Landing Page',
     image: 'landing-375x475.png',
     shorts: 'build a landing responsive page with a dynamic navigation bar based on created sections in the page',
@@ -42,7 +52,7 @@ export const PROJECTS = [
     link: 'https://landing-page-udacity-fwd.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Image Reducer API',
     image: 'api-375x475.png',
     shorts: 'This API allows you to resize images by specifying the desired width and height as a search params and a payload is the image base64 format',
@@ -52,7 +62,7 @@ export const PROJECTS = [
     link: 'https://github.com/blacksnowsoon/Image-Reducer-Api',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Image Reducer Web App',
     image: 'image-resizer-375x475.png',
     shorts: 'Simple web app to resize images by providing the desired width and height along with the image file',
@@ -61,18 +71,21 @@ export const PROJECTS = [
     usedLibs: ['React', 'axios'],
     functions: ['responsive design', 'display mode', 'scroll up', 'animation', 'validating input', 'fetching data', 'Submting data'],
   },
+  
+]
+export const COMMING_SOON = [
   {
-    id: 7,
+    id: "08",
     name: 'POS Retail System',
     image: 'pos-375x475.png',
     shorts: 'Desktop web based Application POS system with full inventory management',
-    description: 'A desktop web based application work locally for retail stores with full inventory management and order management',
+    description: 'A desktop web based application work locally for retail stores with full inventory management and order management, Users Privileges and more',
     link: '/#contact',
+    hasLink: false,
     usedLibs: ['HTML', 'CSS', 'jQuery', 'Bootstrap', 'electron', 'nodejs', 'DataTable',],
     functions: ['NoSQL', 'users & Permissions', 'bills history', 'sorting', 'Export data CSV','Export data PDF', 'stock alarm', 'Standalone app'],
   }
 ]
-
 export const CERTIFICATS = [
   {
     id:1,
