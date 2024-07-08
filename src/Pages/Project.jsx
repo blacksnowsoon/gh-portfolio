@@ -19,9 +19,9 @@ function Project() {
         title={card.name} 
         style={''}>
           <div className='flex flex-wrap -mx-4 '>
-            <div className="w-full lg:w-1/2 px-4 mb-8 sm:w-96 sm:mx-auto">
+            <div className="w-full lg:w-1/2 px-4 mb-8 sm:w-96 sm:mx-auto overflow-hidden">
               <img src={`/${card.image}`} alt={card.name} 
-                className=" rounded shadow-lg"/>
+                className=" rounded shadow-lg scale-90"/>
             </div>
             <div className='flex flex-col justify-between w-full lg:w-1/2 px-4 mb-8  text-white p-2 '>
               <div>

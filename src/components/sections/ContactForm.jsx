@@ -35,49 +35,45 @@ function ContactForm() {
     })
   }
   return (
-    <Section id={'contact'}>
-      <Article title="Contact Me" >
-        <Formik 
-          initialValues={{ name: '', email: '', subject: '', message: '' }} 
+    <Section id={"contact"} className={'overflow-clip'}>
+        <h3 className="animate-pass text-center text-green-400 block text-xl font-bold  text-nowrap  ">
+        Priorities:👉 Performance🚀  Accuracy🔬  Responsiveness🎭 
+        </h3>
+      <Article style="flex gap-4 rounded-lg ">
+        <div className="mx-auto max-w-lg flex-col overflow-clip rounded-lg bg-slate-200">
+          <img title="performance mobile" src="/mobileVersion.jpeg" alt="performance mobile" className="transition-all hover:scale-150 hover:-translate-y-5" />
+        </div>
+        <div className="mx-auto max-w-lg flex-col overflow-clip rounded-lg bg-slate-200">
+          <img title="performance desktop" src="/desktopVersion.jpeg" alt="performance desktop " className='transition-all hover:scale-150 hover:-translate-y-5' />
+        </div>
+      </Article>
+      <Article title="Contact Me">
+        <Formik
+          initialValues={{ name: "", email: "", subject: "", message: "" }}
           onSubmit={onSubmit}
-          validationSchema={contactSchema} 
+          validationSchema={contactSchema}
         >
-          {
-            () => (
-            <Form className='bg-slate-200 flex gap-4 p-4 max-w-lg mx-auto flex-col rounded-lg'>
+          {() => (
+            <Form className="mx-auto flex max-w-lg flex-col gap-4 rounded-lg bg-slate-200 p-4">
+              <Field name={"name"} placeholder={"Your Name"} label={"Name"} component={InputField} required={true} />
+              <Field name={"email"} placeholder={"Your Email"} label={"Email"} required={true} component={InputField} />
               <Field
-                name={'name'}
-                placeholder={'Your Name'}
-                label={'Name'}
+                name={"subject"}
+                placeholder={"Subject"}
+                label={"Subject"}
+                required={true}
                 component={InputField}
-                required={true}
               />
-              <Field 
-                name={'email'}
-                placeholder={'Your Email'}
-                label={'Email'}
+              <Field
+                name={"message"}
+                placeholder={"Your Message"}
+                label={"Message"}
                 required={true}
-                component={InputField} 
-              />
-              <Field 
-                name={'subject'}
-                placeholder={'Subject'}
-                label={'Subject'}
-                required={true}
-                component={InputField} 
-              />
-              <Field 
-                name={'message'}
-                placeholder={'Your Message'}
-                label={'Message'}
-                required={true}
-                component={TextArea} 
+                component={TextArea}
               />
               <SubmitBtn />
             </Form>
-            )
-          }
-        
+          )}
         </Formik>
       </Article>
     </Section>

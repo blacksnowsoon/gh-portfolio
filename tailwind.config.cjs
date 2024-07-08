@@ -21,6 +21,15 @@ module.exports = {
       },
       filter: {
         'grayscale': 'grayscale(100%)'
+      },
+      animation: {
+        'pass': 'pass 10s infinite linear'
+      },
+      keyframes: {
+        pass: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' }
+        }
       }
     },
   },
