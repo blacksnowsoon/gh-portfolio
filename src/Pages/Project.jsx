@@ -1,7 +1,7 @@
 import React, {} from 'react'
 import { useParams } from 'react-router-dom'
 import Article from '../components/Article'
-import { PROJECTS as cards, COMMING_SOON } from '../Data'
+import { PROJECTS as cards, COMMING_SOON } from '../Data.cjs'
 import Ul from '../general/Ul'
 import PageContent from '../components/Section'
 

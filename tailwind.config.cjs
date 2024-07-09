@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+import daisyui from "daisyui"
 module.exports = {
   content: [
     "./index.html",
@@ -16,22 +16,28 @@ module.exports = {
           '2xl': '5rem'
         }
       },
-      dropShadow: {
-        custom: '0 0 16px rgba(255, 165, 0, 0.5)'
-      },
+      
       filter: {
         'grayscale': 'grayscale(100%)'
       },
       animation: {
-        'pass': 'pass 10s infinite linear'
+        'pass': 'pass 10s infinite linear',
+        'color-trans' : 'color-trans 10s forwards linear'
       },
       keyframes: {
         pass: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-150%)' }
+        },
+        'color-trans': {
+          '0%': { borderColor: '#202020' },
+          '100%': { borderColor: '#22c55e' }
         }
       }
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: ["luxury", "lemonade", "night", "business"],
+  },
+  plugins: [daisyui],
 }

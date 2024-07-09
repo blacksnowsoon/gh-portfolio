@@ -7,11 +7,11 @@ function TextArea({field, form, ...props}) {
   
   return (
     <div>
-      <label className='block'>
+      <label className='block '>
         {
           label
         }
-      <textarea {...field} className={'block w-full p-2 rounded-lg'}/>
+      <textarea {...field} className={'textarea textarea-bordered w-full p-2 rounded-lg mt-1'}/>
       </label>
       {
         touched[field.name] && errors[field.name] ?

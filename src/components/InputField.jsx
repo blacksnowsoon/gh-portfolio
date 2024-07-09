@@ -15,12 +15,12 @@ function InputField ({ field, form, ...props }) {
       <input 
         {...field} 
         {...props}
-        className={'block w-full p-2 rounded-lg'} 
+        className={'input w-full p-2 rounded-lg mt-1'} 
         />
       </label>
       {
         touched[field.name] && errors[field.name] ?
-        <p className='text-red-500'>{errors[field.name]}</p>
+        <p className='text-red-600'>{errors[field.name]}</p>
         :
         null
       }

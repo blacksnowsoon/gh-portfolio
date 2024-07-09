@@ -34,8 +34,8 @@ function Platforms() {
       {
         logos.map((logo, index)=> {
         return (
-          <li key={index} title={`${logo}`} className="p-2 bg-slate-200 rounded-lg">
-            <img src={`/libsLogos/${logo}.svg`} alt={logo} className="w-14 h-14" loading='lazy'/>
+          <li key={index} title={`${logo}`} className="p-2 bg-slate-200 rounded-lg shadow-xl shadow-black">
+            <img loading='lazy' src={`/libsLogos/${logo}.svg`} alt={logo} className="w-14 h-14" />
           </li>
           )
       })

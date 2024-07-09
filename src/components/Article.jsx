@@ -14,7 +14,7 @@ function Article({ children, title, style }) {
   },[])
   return (
     <article ref={article} className={secStyle}>
-      <h2 className='text-white font-extrabold text-4xl md:text-4xl text-center pb-2 '>
+      <h2 className=' font-extrabold text-4xl md:text-4xl text-center pb-2 '>
         {
           title
         }

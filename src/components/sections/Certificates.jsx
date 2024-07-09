@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { CERTIFICATS } from '../../Data'
+import { CERTIFICATS } from '../../Data.cjs'
 import Section from '../Section'
 import Article from '../Article'
 
@@ -35,13 +35,14 @@ const {name, pdf} = data
   const li = useMemo(() => {
     return (
       <li className='snap-center min-w-56 rounded-lg skew-y-6  hover:skew-y-0 hover:scale-150 hover:z-10 transition-all'>
-        <figure className='bg-slate-200  p-2 rounded-lg'>
+        <figure className='  p-2 rounded-lg'>
           <img
+            loading='lazy'
             src={pdf}  
             alt={name}
             className=' rounded-t-lg'
           />
-          <figcaption className='text-center rounded-b-lg text-white bg-zinc-700'>
+          <figcaption className='text-center rounded-b-lg text-white bg-zinc-700 border border-gray-600'>
           {name}
           </figcaption>
         </figure>
