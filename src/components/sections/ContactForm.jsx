@@ -36,7 +36,7 @@ function ContactForm() {
   }
   return (
     <Section id={"contact"} className={'overflow-clip'}>
-        <h3 className="animate-pass text-center text-green-400 block text-xl font-bold  text-nowrap  ">
+        <h3 className="animate-pass text-center text-green-400 block text-xl font-bold  text-nowrap -translate-x-full ">
         Priorities:👉 Performance🚀  Accuracy🔬  Responsiveness🎭 
         </h3>
         <div className='container flex flex-col md:flex-row gap-2'>
