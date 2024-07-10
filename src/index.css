@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
+@layer utilities {
+  
   html,
   :host {
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  
+  .full-up {
+    background-image: conic-gradient(from 0.25turn at var(--increase) var(--decrease), var(--tw-gradient-to), 180deg, var(--tw-gradient-to), 180deg, var(--tw-gradient-from));
+  }
   /* width */
   ::-webkit-scrollbar {
     height: 5px;
@@ -30,4 +33,5 @@
     --nav-offsetY: 75px;
     padding-top: var(--nav-offsetY)
   }
+  
 }

@@ -1,27 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-
-function Article({ children, title, style }) {
-  const article= React.useRef(null)
+import React, { useCallback } from 'react'
+import { InView } from 'react-intersection-observer'
+function Article({ children, title, style}) {
   
-  const secStyle = (style && typeof(style) !== 'string') ? ['container mx-auto pb-4', ...style].join(' ') : ['container  mx-auto pb-4 p-top', style ? style: ''  ].join(' ')
+  const articleRef = React.useRef(null)
+  
+  const secStyle = (style && typeof(style) !== 'string') ? ['container mx-auto pb-4', ...style].join(' ') : ['container  mx-auto pb-4 p-top h-full', style ? style: ''  ].join(' ')
+  
   React.useEffect(()=>{
-    if(article) {
+    if(articleRef) {
       const header = document.getElementById('nav-bar')
       const clientHeight = header.clientHeight + 10
-      article.current.style.setProperty('--nav-offsetY', clientHeight + 'px')
+      articleRef.current.style.setProperty('--nav-offsetY', clientHeight + 'px')
     }
-  },[])
+  })
   return (
-    <article ref={article} className={secStyle}>
+    <article ref={articleRef} className={secStyle}>
       <h2 className=' font-extrabold text-4xl md:text-4xl text-center pb-2 '>
         {
           title
         }
       </h2>
-        {
-        children  
-        }
+      {children}
     </article>
   )
 }

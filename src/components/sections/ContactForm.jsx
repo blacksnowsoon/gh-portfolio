@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 import Section from '../Section';
 import Article from '../Article';
 import { Link } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer'
+
 function ContactForm() {
 
   const onSubmit = (values, actions) => {
@@ -36,7 +36,7 @@ function ContactForm() {
   }
   return (
     <Section id={"contact"} className={'overflow-clip'}>
-      <Performance />
+      
       <Article title="Contact Me">
         <Formik
           initialValues={{ name: "", email: "", subject: "", message: "" }}
@@ -66,6 +66,7 @@ function ContactForm() {
           )}
         </Formik>
       </Article>
+      <Performance />
     </Section>
   )
 }
@@ -73,14 +74,13 @@ function ContactForm() {
 export default ContactForm
 
 const Performance = ()=> {
-  const {ref, inView} = useInView({threshold: 0.3})
-  const [performance, setPerformance] = React.useState(0)
-  const [accessibility, setAccessibility] = React.useState(0)
-  const [bestPractices, setBestPractices] = React.useState(0)
-  const [seo, setSeo] = React.useState(0)
+  const [performance, setPerformance] = React.useState(40)
+  const [accessibility, setAccessibility] = React.useState(40)
+  const [bestPractices, setBestPractices] = React.useState(40)
+  const [seo, setSeo] = React.useState(40)
 
   React.useEffect(()=> {
-    if (inView) {
+    
       let per = performance 
       let acc = accessibility
       let bp = bestPractices
@@ -90,7 +90,7 @@ const Performance = ()=> {
           per += 1
           setPerformance(per)
         }
-        if ( acc < 90) {
+        if ( acc < 96) {
           acc += 1
           setAccessibility(acc)
         }
@@ -103,8 +103,9 @@ const Performance = ()=> {
           setSeo(se)
         }
       }, 100)
-    } 
-  }, [inView])
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   
 
   return (
@@ -112,26 +113,30 @@ const Performance = ()=> {
           <h3 className="animate-pass text-center text-green-400 block text-xl font-bold  text-nowrap -translate-x-full mb-2 ">
             Priorities:👉 Performance🚀  Accuracy🔬  Responsiveness🎭 
           </h3>
-          <div ref={ref} className="stats py-4 stats-vertical md:stats-horizontal shadow-xl mx-auto  w-full ">
+          <div className="stats py-4 stats-vertical md:stats-horizontal shadow-xl mx-auto  w-full ">
             <div className="stat w-full place-items-center">
-              <p className="animate-color-trans stat-value text-green-400 text-center border-4 p-6 rounded-full w-28 h-28  flex items-center justify-center">{performance}</p>
+            <p style={{'--increase': `${performance}%`, '--decrease': `${-performance + 130}%`,}}
+                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`}>{performance}</p>
               <p className="stat-title  text-center">Performance</p>
             </div>
             <div className="stat  w-full place-items-center">
-              <p className="animate-color-trans stat-value text-green-400  border-4 p-6 rounded-full w-28 h-28  flex items-center justify-center">{accessibility}</p>
+            <p style={{'--increase': `${accessibility}%`, '--decrease': `${-accessibility + 135}%`,}}
+                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`}>{accessibility}</p>
               <p className="stat-title  text-center">Accessibility</p>
             </div>
             <div className="stat  w-full place-items-center">
-              <p className="animate-color-trans stat-value text-green-400 border-4 p-6 rounded-full w-28 h-28 border-green-500 flex items-center justify-center">{bestPractices}</p>
+            <p style={{'--increase': `${bestPractices}%`, '--decrease': `${-bestPractices + 135}%`,}}
+                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`}>{bestPractices}</p>
               <p className="stat-title  text-center">Best Practices</p>
             </div>
-            <div className="stat  w-full place-items-center">
-                <p className="animate-color-trans stat-value text-green-400 border-4 p-6 rounded-full w-28 h-28 border-green-500 flex items-center justify-center">{seo}</p>
+            <div className="stat  w-full place-items-center ">
+                <p style={{'--increase': `${seo}%`, '--decrease': `${-seo + 135}%`,}}
+                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`} >{seo}</p>
                 <p className="stat-title  text-center">SEO</p>
             </div>
           </div>
           <div className="divider">
-            <Link target='_blank' to={'https://pagespeed.web.dev/analysis/https-gh-portfolio-liard-vercel-app/mctftwqm80?form_factor=desktop'} 
+            <Link target='_blank' to={'https://pagespeed.web.dev/analysis/https-gh-portfolio-liard-vercel-app/o7te4fun0g?form_factor=desktop'} 
             className='text-center btn  rounded  mt-3 glass self-center'>Live Test Preview</Link>
           </div>
         </Article>

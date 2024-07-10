@@ -34,7 +34,7 @@ const {name, pdf} = data
 
   const li = useMemo(() => {
     return (
-      <li className='snap-center min-w-56 rounded-lg skew-y-6  hover:skew-y-0 hover:scale-150 hover:z-10 transition-all'>
+      <li className='snap-center min-w-56 rounded-lg skew-y-6  hover:skew-y-0 hover:scale-150 hover:z-10 transition-all drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] shadow-sm shadow-black'>
         <figure className='  p-2 rounded-lg'>
           <img
             loading='lazy'
