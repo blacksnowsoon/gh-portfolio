@@ -18,12 +18,12 @@ export const Hero = () => {
           </h2>
           <ul className=" flex gap-3 mt-2 justify-center">
             <li className="motion-safe:animate-bounce">
-              <a href="#" className="text-white">
+              <a href="https://github.com/blacksnowsoon" rel="noreferrer" target="_blank" className="text-white">
               <img src="/github-mark-white.svg" alt="github" className="w-8 h-8 " loading="lazy"/>
               </a>
             </li>
             <li className="motion-safe:animate-bounce delay-1000">
-              <a href="#" className="text-white ">
+              <a href="https://www.linkedin.com/in/gharieb-khalifa" rel="noreferrer" target="_blank" className="text-white ">
                 <img src="/linkedin.svg" alt="linkedin" className="w-8 h-8" loading="lazy"/>
               </a>
             </li>
