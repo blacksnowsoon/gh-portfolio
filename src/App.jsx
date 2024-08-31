@@ -4,6 +4,7 @@ import { Router } from './general/Router.jsx';
 import {Loading} from './components/Loading.jsx';
 import Header from './components/Header';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 export const PageWithHeader = ({children}) => (
   <div className="flex h-full flex-col">{children}</div>
 );
@@ -22,6 +23,7 @@ export const App = () => (
         <Router/>
       </main>
       <Analytics />
+      <SpeedInsights />
     </Suspense>
   </BrowserRouter>
 );
