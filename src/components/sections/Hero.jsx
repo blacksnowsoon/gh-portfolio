@@ -3,6 +3,14 @@ import Section from "../Section"
 
 export const Hero = () => {
 
+  const stopeAnimation = (e) =>{
+    e.preventDefault()
+    e.target.classList.remove('motion-safe:animate-bounce')
+  }
+  const startAnimation = (e) =>{
+    e.preventDefault()
+    e.target.classList.add('motion-safe:animate-bounce')
+  }
   return (
     <Section id={'hero'}>
       <div className="bg-[url('/hero-1366x1080.png')] bg-cover bg-no-repeat h-screen bg-center bg-fixed flex items-center justify-center">
@@ -17,14 +25,14 @@ export const Hero = () => {
             <span className=" ">Bussiness Analyst</span>
           </h2>
           <ul className=" flex gap-3 mt-2 justify-center">
-            <li className="motion-safe:animate-bounce">
+            <li onMouseEnter={stopeAnimation} onMouseOut={startAnimation} className="">
               <a href="https://github.com/blacksnowsoon" rel="noreferrer" target="_blank" className="text-white">
-              <img src="/github-mark-white.svg" alt="github" className="w-8 h-8 " loading="lazy"/>
+              <img src="/github-mark-white.svg" alt="github" className="w-8 h-8 motion-safe:animate-bounce" loading="lazy"/>
               </a>
             </li>
-            <li className="motion-safe:animate-bounce delay-1000">
+            <li onMouseEnter={stopeAnimation} onMouseOut={startAnimation} className="">
               <a href="https://www.linkedin.com/in/gharieb-khalifa" rel="noreferrer" target="_blank" className="text-white ">
-                <img src="/linkedin.svg" alt="linkedin" className="w-8 h-8" loading="lazy"/>
+                <img src="/linkedin.svg" alt="linkedin" className="w-8 h-8 motion-safe:animate-bounce delay-1000" loading="lazy"/>
               </a>
             </li>
           </ul>

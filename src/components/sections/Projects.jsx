@@ -6,9 +6,7 @@ import Section from '../Section'
 import Article from '../Article'
 
 
-
 function Projects() {
-  
   const content = useMemo(() => (
     PROJECTS.map((card, index) =>{
       return (
@@ -28,7 +26,6 @@ function Projects() {
             content
           }
         </ul>
-      <CommingSoon />
       </Article>
     </Section>
   )
@@ -67,26 +64,4 @@ const PorjectCard = (props) =>{
         </div>
       </div>
   )
-}
-
-const CommingSoon = () => {
-
-  return (
-    <div className='mt-4 p-4 glass'>
-      <div className={"divider"}>
-        <h3 className=' font-extrabold text-2xl md:text-2xl '>Coming Soon</h3>
-      </div>
-      <ul className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2 mt-3'>
-        {
-          COMMING_SOON.map((card, index) =>{
-            return (
-              <li key={card.name.slice(3)+index}>
-                <PorjectCard card={card} check={false} />
-              </li>
-            )
-          })
-        }
-      </ul>
-    </div>
-)
 }

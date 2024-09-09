@@ -27,7 +27,7 @@ export const PROJECTS = [
     id:3,
     name: 'Static Website',
     image: 'isfp-375x475.png',
-    shorts: 'Using Vitejs-React to redesign the ISFP website with no prebuilt components just react and react-router-dom package.',
+    shorts: 'Using Vitejs-React to redesign the ISFP website with no prebuilt components just react and react-router-dom packages.',
     description: 'giving the wibsite of the company where I am working a new responsive SPA design with theme option',
     usedLibs: ['Vitejs-react', 'react-router-hash-link'],
     functions: ['display mode', 'infinit sliders'],
@@ -38,7 +38,7 @@ export const PROJECTS = [
     id:4,
     name: 'A workshop website',
     image: 'workShop-375x475.png',
-    shorts: 'A website for small aluminum workshop to be as a protfolio and catalogue.',
+    shorts: 'A protfolio for small aluminum workshop acts as a catalogue.',
     description: 'A small website that has a dashoard lets the owner to add his content with full control plus some statistics with a good UI that lets users signin and save theme favorate kitchens ability to contact the brand with whats app or via direct call.',
     usedLibs: ['reactjs', 'firebase', 'firestore', 'firebase storage', 'prop-types', 'react-query', 'react-hook-form'],
     functions: ['google Signin', 'creating admin dashboard','reading files', 'upload images', 'validating forms', 'save user data', 'paginate', 'firebase hosting', 'authorization'],
@@ -126,3 +126,4 @@ export const CERTIFICATS = [
     pdf: '/certificates/react-1.webp',
   }
 ]
+

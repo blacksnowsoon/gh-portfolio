@@ -7,7 +7,7 @@ const Bio = () => {
     <Section>
       <Article style={' border rounded glass  mt-4'}>
         <h3 className=' font-semibold text-2xl md:text-xl mt-2 '>
-        “Hi, I’m Codey! I’m a web developer with in-depth experience in UI/UX design. In a nutshell, I create websites that help organizations address business challenges and meet their needs. I manage everything from website navigation and layout to a company’s web hosting and security architecture. My expertise lies within front-end web apps, and the main languages in my tech stack are JavaScript, React, and of course HTML/CSS. I’m a lifelong learner (currently taking a course on building Desktop apps with electron) love to read, run, and find new bubble cofe shops around.” 🚀🌐
+        Systems analysis and web development both play vital roles in the development and improvement of web-based systems, With a comprehensive understanding of system architecture and software development life cycles, I excel in analyzing existing systems to identify areas for improvement. Through research and analysis, I propose effective strategies to mitigate risks and challenges. Collaboration is key in my role, as I work closely with stakeholders to gather requirements and define project scopes. By bridging the gap between technical and non-technical stakeholders, I ensure a successful implementation and adoption of system enhancements. With excellent problem-solving and communication skills, I am dedicated to driving efficiency and innovation within organizations 🚀🌐
         </h3>
       </Article>
       <Performance />

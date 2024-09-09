@@ -19,7 +19,7 @@ function Certificates() {
   }
   return (
     <Section id={'certificates'}>
-      <Article title={"Wall Of Certificates"} style=''>
+      <Article title={"Achieved Certificates"} style=''>
         {
           certificatesList()
         }
