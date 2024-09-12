@@ -17,7 +17,7 @@ export const Hero = () => {
         <div className="flex flex-col justify-center items-center">
           <img loading='lazy' src="/gk-logo-125x125-white.png" alt="logo" className="w-16 h-14 animate-pulse" />
           <h2 className="text-white font-extrabold text-4xl md:text-4xl">
-              <span className="block">gharieb khalifa</span>
+              <span className="block">Gharieb Khalefa</span>
           </h2>
           <h2 className="text-white text-center text-lg ">
             <span>Web Developer</span>
