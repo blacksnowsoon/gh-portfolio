@@ -24,7 +24,8 @@ const logos = [
 'react',
 'vitejs',
 'react-native', 
-'redux', 
+'redux',
+'frappe', 
 ]
   function Platforms() {
     const logosList = useMemo(()=>{
