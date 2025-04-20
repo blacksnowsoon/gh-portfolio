@@ -41,7 +41,7 @@ function ContactForm() {
     <Section id={"contact"} className={'overflow-clip'}>
       
       <Article title="Contact Me" style="">
-        <div className='flex flex-row gap-4 md:p-10'>
+        <div className='flex flex-row gap-4 md:p-10 flex-wrap'>
         {/* contact info */}
           <div className='flex-1'>
             <p className='text-lg font-bold text-center p-3'>Feel free to contact me</p>

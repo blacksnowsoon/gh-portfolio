@@ -22,9 +22,9 @@ function Projects() {
   return (
     <Section id={'projects'}>
       <Article title={'Projects'} style={''}>
-        <ul  className={`grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2 mt-2`}>
+        <ul  className={`flex flex-wrap justify-center gap-4 p-4`}>
           {
-            content
+            content[0]
           }
         </ul>
       </Article>
@@ -73,21 +73,21 @@ const ProjectCard = ({ card }) => {
   const isComingSoon = /^0[0-9].*$/.test(card.id);
   
   return (
-    <div className="card bg-base-100 image-full h-full shadow-xl transition-all 
+    <div className="card card-compact bg-base-100 w-80 h-full shadow-xl transition-all 
                   hover:bg-base-200 group duration-300 ease-in-out
                   hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
       {/* Project Image */}
-      {/* <figure>
+      <figure>
         <img 
           loading="lazy"
           src={`/${card.image}`} 
           alt={card.name} 
-          className="w-full h-full object-cover"
+          className=""
         />
-      </figure> */}
+      </figure>
       
       {/* Card Content */}
-      <div className="card-body p-6">
+      <div className="card-body">
         <h2 className="card-title text-2xl ">
           {card.name}
           {isComingSoon && (

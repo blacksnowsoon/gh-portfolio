@@ -3,13 +3,13 @@
 export const PROJECTS = [
   {
     id:1,
-    name: 'Dashboard Template',
-    image: 'go-starter-project375x375.png',
-    shorts: 'A starter project Template supports RTL and Responsive with dynamic sidebar',
-    description: 'A starter Project for dashboard support RTL for whom wants to start a new project, can be user as system dashboard or admin dashboard.',
-    usedLibs: ['Vitejs-react', 'mui/icons-material', 'mui/material', 'history', 'i18next', 'date-fns', 'react-helmet-async', 'stylis'],
-    functions: ['nice search bar', 'dynamic sidebar', 'coockie message', 'RTL & LTR layout'],
-    link: 'https://go-starter-project.vercel.app/',
+    name: 'g-k Portfolio',
+    image: 'projects/gk-portfolio.jpg',
+    shorts: 'A Protfolio website for a software engineer with tailwindcss and vitejs-react',
+    description: 'A  responsive design and a dynamic navigation bar smoothly scrolls to the sections in the page with a good UI and a contact form that sends emails using emailjs',
+    usedLibs: ['Vitejs-react', 'aos', 'tailwind', 'daisyui', 'react-icons', 'react-router-dom'],
+    functions: ['sections animations', 'sending emails', 'responsive', ''],
+    link: 'https://gh-portfolio-liard.vercel.app/',
     responsive: true,
   },
   {

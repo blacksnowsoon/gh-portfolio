@@ -1,3 +1,4 @@
+import Navbar from './Navbar'
 
 
 function Header() {
@@ -5,7 +6,7 @@ function Header() {
 
   return (
     <header>
-      <nav id='nav-bar'  className="fixed z-50 w-screen p-4 glass shadow">
+      {/* <nav id='nav-bar'  className="fixed z-50 w-screen p-4 glass shadow">
         <div className="container flex justify-around items-center flex-wrap">
           <div className="">
             <img loading='lazy' className="w-9 filter drop-shadow-custom" src="/gk-logo-125x125-black.png" alt="gk logo"/>
@@ -20,10 +21,10 @@ function Header() {
             </ul>
           </div>
         </div>
-      </nav> 
+      </nav>  */}
+      <Navbar />
     </header>
   )
 }
 
 export default Header
-// [background:linear-gradient(45deg,theme(colors.slate.800)_50%,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box]
