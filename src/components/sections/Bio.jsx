@@ -1,87 +1,94 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import Section from '../Section'
-import Article from '../Article'
-const Bio = () => {
+import React from 'react';
+import { FaChartLine, FaCode, FaDatabase, FaMobileAlt, FaUsers } from 'react-icons/fa';
+import Section from '../Section';
+
+const Services = () => {
+  const services = [
+    {
+      icon: <FaChartLine className="text-3xl text-blue-600" />,
+      title: "Business Process Optimization",
+      description: "Analyze and streamline workflows using data-driven approaches. Reduced operational inefficiencies by 30% at Adabia Port through custom solutions.",
+      aos: "fade-right"
+    },
+    {
+      icon: <FaCode className="text-3xl text-purple-600" />,
+      title: "Full-Stack Development",
+      description: "Build end-to-end web applications using Frappe Framework (Python/JS), React.js, and PostgreSQL. Created a custom task management system that improved cross-department collaboration.",
+      aos: "fade-up"
+    },
+    {
+      icon: <FaDatabase className="text-3xl text-green-600" />,
+      title: "Custom ERP Solutions",
+      description: "Develop tailored business management systems with Frappe Framework. Integrated logistics modules that increased port operational efficiency by 50%.",
+      aos: "fade-left"
+    },
+    {
+      icon: <FaMobileAlt className="text-3xl text-yellow-600" />,
+      title: "Responsive Web Development",
+      description: "Design and build modern, mobile-friendly interfaces with React.js, Bootstrap, and CSS. Portfolio includes real-time monitoring dashboards and user-friendly web apps.",
+      aos: "fade-right"
+    },
+    {
+      icon: <FaUsers className="text-3xl text-red-600" />,
+      title: "Technical Consultation",
+      description: "Bridge business needs with technical solutions. Train teams on new systems and provide ongoing support for smooth digital transitions.",
+      aos: "fade-up"
+    },
+    {
+      icon: <FaCode className="text-3xl text-indigo-600" />,
+      title: "API Integration",
+      description: "Connect disparate systems through custom APIs. Integrated payment gateways and RFID devices at Adabia Port for seamless operations.",
+      aos: "fade-left"
+    }
+  ];
+// className="py-16 px-4 bg-gray-50"
   return (
-    <Section>
-      <Article style={' border rounded glass  mt-4'}>
-        <h3 className=' font-semibold text-2xl md:text-xl mt-2 '>
-        Systems analysis and web development both play vital roles in the development and improvement of web-based systems, With a comprehensive understanding of system architecture and software development life cycles, I excel in analyzing existing systems to identify areas for improvement. Through research and analysis, I propose effective strategies to mitigate risks and challenges. Collaboration is key in my role, as I work closely with stakeholders to gather requirements and define project scopes. By bridging the gap between technical and non-technical stakeholders, I ensure a successful implementation and adoption of system enhancements. With excellent problem-solving and communication skills, I am dedicated to driving efficiency and innovation within organizations 🚀🌐
-        </h3>
-      </Article>
-      <Performance />
+    <Section >
+      <div className="max-w-6xl mx-auto">
+        <div 
+          className="text-center mb-16"
+          data-aos="fade-down"
+        >
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">What I Offer</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Bridging business analysis with full-stack development to deliver comprehensive solutions
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-transparent hover:border-blue-500"
+              data-aos={service.aos}
+              data-aos-delay={index * 100}
+            >
+              <div className="mb-4">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div 
+          className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center text-white"
+          data-aos="zoom-in"
+        >
+          <h3 className="text-2xl font-bold mb-4">Need a custom solution?</h3>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Whether you need process automation, a web application, or system integration, I can help transform your requirements into working solutions.
+          </p>
+          <button className="bg-white text-blue-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+            Let's Discuss Your Project
+          </button>
+        </div>
+      </div>
     </Section>
-  )
-}
+  );
+};
 
-export default Bio
-const Performance = ()=> {
-  const [performance, setPerformance] = React.useState(40)
-  const [accessibility, setAccessibility] = React.useState(40)
-  const [bestPractices, setBestPractices] = React.useState(40)
-  const [seo, setSeo] = React.useState(40)
+export default Services
 
-  React.useEffect(()=> {
-    
-      let per = performance 
-      let acc = accessibility
-      let bp = bestPractices
-      let se = seo
-      setInterval(()=> {
-        if (per < 100) {
-          per += 1
-          setPerformance(per)
-        }
-        if ( acc < 96) {
-          acc += 1
-          setAccessibility(acc)
-        }
-        if (bp < 96) {
-          bp+=1
-          setBestPractices(bp)
-        }
-        if (se < 91) {
-          se +=1
-          setSeo(se)
-        }
-      }, 100)
-  
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-  
 
-  return (
-    <Article style={' border rounded glass  mt-4 overflow-clip'} >
-          <h3 className="animate-pass text-center text-green-400 block text-xl font-bold  text-nowrap -translate-x-full mb-2 ">
-            Priorities:👉 Performance🚀  Accuracy🔬  Responsiveness🎭 
-          </h3>
-          <div className="stats py-4 stats-vertical md:stats-horizontal shadow-xl mx-auto  w-full ">
-            <div className="stat w-full place-items-center">
-            <p style={{'--increase': `${performance}%`, '--decrease': `${-performance + 130}%`,}}
-                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`}>{performance}</p>
-              <p className="stat-title  text-center">Performance</p>
-            </div>
-            <div className="stat  w-full place-items-center">
-            <p style={{'--increase': `${accessibility}%`, '--decrease': `${-accessibility + 135}%`,}}
-                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`}>{accessibility}</p>
-              <p className="stat-title  text-center">Accessibility</p>
-            </div>
-            <div className="stat  w-full place-items-center">
-            <p style={{'--increase': `${bestPractices}%`, '--decrease': `${-bestPractices + 135}%`,}}
-                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`}>{bestPractices}</p>
-              <p className="stat-title  text-center">Best Practices</p>
-            </div>
-            <div className="stat  w-full place-items-center ">
-                <p style={{'--increase': `${seo}%`, '--decrease': `${-seo + 135}%`,}}
-                  className={` text-transparent bg-clip-text drop-shadow-[0_1px_1px_rgba(255,255,255,0.75)] full-up from-base-100 to-green-400 stat-value text-6xl w-28 h-28  p-4 flex items-center justify-center`} >{seo}</p>
-                <p className="stat-title  text-center">SEO</p>
-            </div>
-          </div>
-          <div className="divider">
-            <Link target='_blank' to={'https://pagespeed.web.dev/analysis/https-gh-portfolio-liard-vercel-app/o7te4fun0g?form_factor=desktop'} 
-            className='text-center btn  rounded  mt-3 glass self-center'>Live Test Preview</Link>
-          </div>
-    </Article>
-  )
-}

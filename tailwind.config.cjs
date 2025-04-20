@@ -15,6 +15,9 @@ module.exports = {
           lg: '4rem',
           xl: '5rem',
           '2xl': '5rem'
+        },
+        spacing: {
+          'nav-height': '4rem',
         }
       },
       filter: {
@@ -35,7 +38,8 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ["luxury", "lemonade", "night", "business"],
+    themes: ["retro", "lemonade", "cupcake", "business"],
   },
   plugins: [daisyui],
+  
 }

@@ -24,7 +24,7 @@ function Project() {
               className=" rounded shadow-lg scale-90"/>
           </div>
           
-          <div className='flex flex-col justify-between w-full lg:w-1/2 px-4 mb-8  text-white p-2 '>
+          <div className='flex flex-col justify-between w-full lg:w-1/2 px-4 mb-8 p-2 '>
             <div>
               <p className="">
                 {card.shorts}

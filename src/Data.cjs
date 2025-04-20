@@ -16,7 +16,7 @@ export const PROJECTS = [
     id:2,
     name: 'Casher Bill',
     image: 'bill1-375x475.png',
-    shorts: 'A small web app for the casher of adabia port include login system, queries and reports, built from scratch.',
+    shorts: 'A small web app for the casher of Adabia Port include login system, queries and reports, built from scratch.',
     description: 'Analyising the casher cycle and build an app working locally using indexed DB with all features as login system, multi users, reports, printing bills, export bills as PDF, export reports as CSV ',
     usedLibs: ['Vitejs-react', 'Dexie-js', 'date-fns', 'Jspdf', 'React-csv', 'React-datepicker', 'React-hook-form', 'html2canvas'],
     functions: ['authentication', 'printing', 'Querying Data from DB', 'exporting Data as CSV & PDF', 'form validation', 'apply animations', 'all CRUD operations'],

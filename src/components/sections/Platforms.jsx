@@ -30,11 +30,11 @@ const logos = [
   function Platforms() {
     const logosList = useMemo(()=>{
       return (
-        <ul className='flex gap-4 flex-wrap justify-center  '>
+        <ul className='p-4 flex flex-wrap justify-center gap-4'>
         {
           logos.map((logo, index)=> {
           return (
-            <li key={index} title={`${logo}`} className="p-2 bg-slate-300  rounded-lg shadow-xl shadow-black transition-all">
+            <li key={index} title={`${logo}`} className="p-2 bg-slate-300 rounded-lg shadow-xl shadow-black transition-all" data-aos="fade-down-right" data-aos-delay={index * 100} data-aos-duration="1000" data-aos-easing="ease-in-out">
               <img loading='lazy' src={`/libsLogos/${logo}.svg`} alt={logo} className="w-14 h-14" />
             </li>
             )
@@ -44,11 +44,13 @@ const logos = [
       )
     },[])
     return (
-      <Section id={'platforms'}>
-        <Article title={'Platforms & Libs'} >
-          {
-            logosList
-          }
+      <Section id={'platforms'} className={'bg-gradient-to-br from-[#BA4807] to-[#F9BF2C]'}>
+        <Article title={''} style={''} >
+          <div className='p-4 my-auto min-h-screen flex justify-center items-center flex-col '>
+            {
+              logosList
+            }
+          </div>
         </Article>
       </Section>
     )

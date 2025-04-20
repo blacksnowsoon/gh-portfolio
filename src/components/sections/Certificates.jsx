@@ -8,17 +8,17 @@ function Certificates() {
 
   const certificatesList = ()=> {
     return (
-      <ul className='px-14 scroll-px-14 select-none snap-mandatory snap-x flex gap-4 items-center overflow-x-auto overflow-y-hidden min-h-72 focus:touch-pan-x'>
+      <ul className='px-14 flex flex-wrap justify-center gap-4 items-center '>
       {
         CERTIFICATS.map((certificate, index) => {
-          return <LiCertificate data={certificate} key={index}/>
+          return <LiCertificate data={certificate} key={index} delay={index}/>
         })
       }
     </ul>
     )
   }
   return (
-    <Section id={'certificates'}>
+    <Section id={'certificates'} className={''}>
       <Article title={"Achieved Certificates"} style=''>
         {
           certificatesList()
@@ -28,13 +28,13 @@ function Certificates() {
   )
 }
 
-const LiCertificate = ({data}) => {
+const LiCertificate = ({data, delay}) => {
 
 const {name, pdf} = data
 
   const li = useMemo(() => {
     return (
-      <li className='snap-center min-w-56 rounded-lg skew-y-6  hover:skew-y-0 hover:scale-150 hover:z-10 transition-all drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] shadow-sm shadow-black'>
+      <li className='snap-center min-w-56 rounded-lg   hover:skew-y-0 hover:scale-150 hover:z-10 transition-all drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] shadow-sm shadow-black' key={name} data-aos="fade-up-right" data-aos-duration="1500" data-aos-delay={delay*100} data-aos-easing="ease-in-out">
         <figure className='  p-2 rounded-lg'>
           <img
             loading='lazy'
@@ -48,7 +48,7 @@ const {name, pdf} = data
         </figure>
       </li>
     )
-  },[name, pdf])
+  },[delay, name, pdf])
   return (
     li
   )

@@ -8,6 +8,9 @@ import emailjs from '@emailjs/browser';
 import Section from '../Section';
 import Article from '../Article';
 
+import { FaMobileAlt,  FaMailBulk, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+
 
 function ContactForm() {
 
@@ -37,34 +40,65 @@ function ContactForm() {
   return (
     <Section id={"contact"} className={'overflow-clip'}>
       
-      <Article title="Contact Me">
-        <Formik
-          initialValues={{ name: "", email: "", subject: "", message: "" }}
-          onSubmit={onSubmit}
-          validationSchema={contactSchema}
-        >
-          {() => (
-            <Form className="mx-auto flex max-w-lg flex-col gap-4 rounded-lg glass p-4">
-              <Field name={"name"} placeholder={"Your Name"} label={"Name"} component={InputField} required={true} />
-              <Field name={"email"} placeholder={"Your Email"} label={"Email"} required={true} component={InputField} />
-              <Field
-                name={"subject"}
-                placeholder={"Subject"}
-                label={"Subject"}
-                required={true}
-                component={InputField}
-              />
-              <Field
-                name={"message"}
-                placeholder={"Your Message"}
-                label={"Message"}
-                required={true}
-                component={TextArea}
-              />
-              <SubmitBtn />
-            </Form>
-          )}
-        </Formik>
+      <Article title="Contact Me" style="">
+        <div className='flex flex-row gap-4 md:p-10'>
+        {/* contact info */}
+          <div className='flex-1'>
+            <p className='text-lg font-bold text-center p-3'>Feel free to contact me</p>
+            <ul className='flex flex-col gap-4 p-4'>
+              <li className=''>
+                <FaMobileAlt  title='Mobile' className='text-xl inline mx-2' />
+                <span>(+02) 015 553 737 01</span>
+              </li>
+              <li>
+                <FaWhatsapp title='whatsapp' className='text-green-400 text-xl inline mx-2' />
+                <span>(+02) 015 553 737 01</span>
+              </li>
+              <li>
+                <FaMailBulk title='Email' className=' text-xl inline mx-2' />
+                <span>blacksnow.soon@gmail.com</span>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/gharieb-khalifa" rel="noreferrer" target="_blank" className="" title="LinkedIn"><FaLinkedin title='Linkedin' className=' text-2xl inline mx-2 ' /></a>
+                <a href="https://github.com/blacksnowsoon" rel="noreferrer" target="_blank" className="" title="GitHub"><FaGithub title='Github' className=' text-2xl inline mx-2' /></a>
+                <a href="https://mostaql.com/u/Gharieb_Khalefa/portfolio" rel="noreferrer" target="_blank" className="" title="Mostaql">
+                    <img src="/mostaql-icon.png" alt="Mostaql" className="w-6 h-6 inline mx-2" />
+                  </a>
+              </li>
+            </ul>
+          </div>
+        {/* send email */}
+          <div className='flex-1'>
+            <p className='text-lg font-bold text-center p-3'>You can also contact me by email</p>
+            <Formik
+              initialValues={{ name: "", email: "", subject: "", message: "" }}
+              onSubmit={onSubmit}
+              validationSchema={contactSchema}
+            >
+              {() => (
+                <Form className="mx-auto flex max-w-lg flex-col gap-4 rounded-lg glass p-4">
+                  <Field name={"name"} placeholder={"Your Name"} label={"Name"} component={InputField} required={true} />
+                  <Field name={"email"} placeholder={"Your Email"} label={"Email"} required={true} component={InputField} />
+                  <Field
+                    name={"subject"}
+                    placeholder={"Subject"}
+                    label={"Subject"}
+                    required={true}
+                    component={InputField}
+                  />
+                  <Field
+                    name={"message"}
+                    placeholder={"Your Message"}
+                    label={"Message"}
+                    required={true}
+                    component={TextArea}
+                  />
+                  <SubmitBtn />
+                </Form>
+              )}
+            </Formik>
+          </div>
+        </div>
       </Article>
       
     </Section>

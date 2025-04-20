@@ -5,6 +5,7 @@ import { NotFound } from "./NotFound.jsx";
 import { Layout } from "./Layout.jsx";
 import Project from "../Pages/Project.jsx";
 
+
 export const Router = () => (
   <Routes>
     <Route
@@ -31,5 +32,6 @@ export const Router = () => (
         </Layout>
       }
     />
+    
   </Routes>
 );

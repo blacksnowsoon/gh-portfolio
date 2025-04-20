@@ -5,7 +5,7 @@ function Article({ children, title, style}) {
   
   const articleRef = React.useRef(null)
   
-  const secStyle = (style && typeof(style) !== 'string') ? ['container mx-auto pb-4', ...style].join(' ') : ['container  mx-auto pb-4 p-top h-full', style ? style: ''  ].join(' ')
+  const secStyle = ['container mx-auto p-top h-full min-h-full ', style ? style: ''  ].join(' ')
   
   React.useEffect(()=>{
     if(articleRef) {
@@ -15,8 +15,8 @@ function Article({ children, title, style}) {
     }
   })
   return (
-    <article ref={articleRef} className={secStyle}>
-      <h2 className=' font-extrabold text-4xl md:text-4xl text-center pb-2 '>
+    <article ref={articleRef} className={secStyle}   >
+      <h2  className=' font-extrabold text-4xl md:text-4xl text-center pb-2 '>
         {
           title
         }
