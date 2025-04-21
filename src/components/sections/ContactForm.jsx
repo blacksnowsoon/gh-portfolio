@@ -41,10 +41,10 @@ function ContactForm() {
     <Section id={"contact"} className={'overflow-clip'}>
       
       <Article title="Contact Me" style="">
-        <div className='flex flex-row gap-4 md:p-10 flex-wrap'>
+        <div className='flex flex-row flex-wrap justify-start items-start gap-4'>
         {/* contact info */}
           <div className='flex-1'>
-            <p className='text-lg font-bold text-center p-3'>Feel free to contact me</p>
+            <h4 className='text-xl font-bold p-3'>Feel free to contact me</h4>
             <ul className='flex flex-col gap-4 p-4'>
               <li className=''>
                 <FaMobileAlt  title='Mobile' className='text-xl inline mx-2' />
@@ -69,7 +69,7 @@ function ContactForm() {
           </div>
         {/* send email */}
           <div className='flex-1'>
-            <p className='text-lg font-bold text-center p-3'>You can also contact me by email</p>
+            <p className='text-xl font-bold text-center p-3'>You can also contact me by email</p>
             <Formik
               initialValues={{ name: "", email: "", subject: "", message: "" }}
               onSubmit={onSubmit}

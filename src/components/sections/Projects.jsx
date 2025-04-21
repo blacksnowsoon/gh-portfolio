@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useMemo } from 'react'
+import React, { useMemo, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { PROJECTS, COMMING_SOON } from '../../Data.cjs'
 import Section from '../Section'
 import Article from '../Article'
 import { FaArrowRight } from "react-icons/fa";
-
+import GLightbox from 'glightbox';
 
 function Projects() {
   const content = useMemo(() => (
@@ -18,13 +18,30 @@ function Projects() {
       )
     })
   ),[])
-  
+  useEffect(() => {
+    const lightbox = GLightbox({ 
+      selector: '.glightbox', // Match your image class
+      touchNavigation: true,
+      closeOnOutsideClick : true,
+      openEffect: 'fade',
+      closeEffect: 'fade',
+      loop: true,
+      zoomable: true,
+      descPosition: 'bottom',
+      preload: false,
+      
+      open:(el) => {
+        console.log('Lightbox opened', el);
+      }
+    });
+    return () => lightbox.destroy(); // Cleanup
+  }, []);
   return (
     <Section id={'projects'}>
       <Article title={'Projects'} style={''}>
         <ul  className={`flex flex-wrap justify-center gap-4 p-4`}>
           {
-            content[0]
+            content.slice(0, 2)
           }
         </ul>
       </Article>
@@ -78,12 +95,24 @@ const ProjectCard = ({ card }) => {
                   hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
       {/* Project Image */}
       <figure>
+        <a 
+          role="button" className='glightbox' href={`${card.image}`} 
+          data-title={card.name} data-description={card.shorts + card.description}
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()}}
+        >
         <img 
           loading="lazy"
-          src={`/${card.image}`} 
+          src={`${card.image}`} 
           alt={card.name} 
-          className=""
-        />
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()}}
+          
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        /></a>
+        
       </figure>
       
       {/* Card Content */}
@@ -109,7 +138,7 @@ const ProjectCard = ({ card }) => {
               className="btn opacity-0 group-hover:opacity-100 
                         transition-opacity duration-300 gap-2"
             >
-              Read More
+              Details
               <FaArrowRight className="w-4 h-4" />
             </Link>
           )}

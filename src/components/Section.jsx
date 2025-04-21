@@ -7,7 +7,7 @@ function Section({children, id, className}) {
   useEffect(()=>{
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
     });
     return () => {
       AOS.refresh(); // Cleanup on component unmount

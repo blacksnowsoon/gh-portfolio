@@ -35,7 +35,7 @@ const logos = [
           logos.map((logo, index)=> {
           return (
             <li key={index} title={`${logo}`} className="p-2  rounded-lg shadow-xl shadow-black transition-all" data-aos="fade-down-right" data-aos-delay={index * 100} data-aos-duration="1000" data-aos-easing="ease-in-out">
-              <img loading='lazy' src={`/libsLogos/${logo}.svg`} alt={logo} className="w-14 h-14" />
+              <img loading='lazy' src={`/libsLogos/${logo}.svg`} alt={logo} className="w-14 h-14 " />
             </li>
             )
         })

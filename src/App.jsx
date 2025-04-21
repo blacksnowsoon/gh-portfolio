@@ -5,7 +5,7 @@ import {Loading} from './components/Loading.jsx';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navbar from './components/Navbar';
-
+import 'glightbox/dist/css/glightbox.min.css';
 export const PageWithHeader = ({children}) => (
   <div className="flex h-full flex-col">{children}</div>
 );
