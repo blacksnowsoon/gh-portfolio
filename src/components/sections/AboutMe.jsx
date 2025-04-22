@@ -11,7 +11,7 @@ const AboutMe = () => {
       <Article title="About Me" className="text-center">
         <div className="relative ">
           {/* Timeline line */}
-          <div className="absolute w-1 h-full  transform -translate-x-1/2 bg-blue-200 " data-aos="fade-up"></div>
+          <div className="absolute w-1 h-full transform -translate-x-1/2 bg-blue-200 " data-aos="fade-up"></div>
 
           {/* Timeline items */}
           <div className="space-y-8">

@@ -16,16 +16,17 @@ function ContactForm() {
 
   const onSubmit = (values, actions) => {
   
-    const service_id = 'service_gh_mailer'
+    const service_id = 'service_x9pkra8'
     const template_id = 'contact_form'
-    const publicKey = 'kW68NtHPmP4o2a8mL'
+    const publicKey = '1Uggwk846OdMrpDz2'
     const emailTemplate = {
       user_name: values?.name,
       user_email: values?.email,
+      time: new Date().toLocaleString(),
       message: values?.message,
       subject: values?.subject
     }
-    
+
     emailjs.send(service_id, template_id,emailTemplate, publicKey)
     .then(() => {
       actions.resetForm()
@@ -38,12 +39,12 @@ function ContactForm() {
     })
   }
   return (
-    <Section id={"contact"} className={'overflow-clip'}>
+    <Section id={"contact"} className={''}>
       
       <Article title="Contact Me" style="">
-        <div className='flex flex-row flex-wrap justify-start items-start gap-4'>
+        <div className='flex flex-wrap justify-start items-start gap-2 '>
         {/* contact info */}
-          <div className='flex-1'>
+          <div className='md:flex-1'>
             <h4 className='text-xl font-bold p-3'>Feel free to contact me</h4>
             <ul className='flex flex-col gap-4 p-4'>
               <li className=''>
@@ -68,7 +69,7 @@ function ContactForm() {
             </ul>
           </div>
         {/* send email */}
-          <div className='flex-1'>
+          <div className='md:flex-1'>
             <p className='text-xl font-bold text-center p-3'>You can also contact me by email</p>
             <Formik
               initialValues={{ name: "", email: "", subject: "", message: "" }}

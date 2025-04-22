@@ -40,6 +40,6 @@ module.exports = {
   daisyui: {
     themes: ["retro", "lemonade", "cupcake", "business"],
   },
-  plugins: [daisyui],
+  plugins: [daisyui,],
   
 }

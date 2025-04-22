@@ -44,7 +44,7 @@ const logos = [
       )
     },[])
     return (
-      <Section id={'platforms'} className={'bg-gradient-to-br from-[#BA4807] to-[#F9BF2C]'}>
+      <Section id={'platforms'} className={' custom-bg '}>
         <Article title={''} style={''} >
           <div className='p-4 my-auto min-h-screen flex justify-center items-center flex-col '>
             {

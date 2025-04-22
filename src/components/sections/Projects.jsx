@@ -41,7 +41,7 @@ function Projects() {
       <Article title={'Projects'} style={''}>
         <ul  className={`flex flex-wrap justify-center gap-4 p-4`}>
           {
-            content.slice(0, 2)
+            content
           }
         </ul>
       </Article>
@@ -95,7 +95,7 @@ const ProjectCard = ({ card }) => {
                   hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
       {/* Project Image */}
       <figure>
-        <a 
+        <a
           role="button" className='glightbox' href={`${card.image}`} 
           data-title={card.name} data-description={card.shorts + card.description}
           onClick={(e) => {
@@ -116,22 +116,17 @@ const ProjectCard = ({ card }) => {
       </figure>
       
       {/* Card Content */}
-      <div className="card-body">
-        <h2 className="card-title text-2xl ">
+      <div className="card-body relative ">
+        <h3 className="card-title m-0 p-0 ">
           {card.name}
-          {isComingSoon && (
-            <span className="badge badge-secondary ml-2 animate-pulse">
-              Coming Soon
-            </span>
-          )}
-        </h2>
+        </h3>
         
-        <p className=" text-lg mb-4">
+        {/* <p className=" text-lg mb-4">
           {card.shorts}
-        </p>
+        </p> */}
         
         {/* Read More Button */}
-        <div className="card-actions justify-end mt-auto">
+        {/* <div className="card-actions justify-end mt-auto">
           {!isComingSoon && (
             <Link 
               to={`project/${card.id}`}
@@ -142,7 +137,7 @@ const ProjectCard = ({ card }) => {
               <FaArrowRight className="w-4 h-4" />
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

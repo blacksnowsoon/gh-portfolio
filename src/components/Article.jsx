@@ -4,19 +4,15 @@ import { InView } from 'react-intersection-observer'
 function Article({ children, title, style}) {
   
   const articleRef = React.useRef(null)
-  
-  const secStyle = ['container mx-auto p-top h-full min-h-full ', style ? style: ''  ].join(' ')
+  // p-top
+  const secStyle = ['h-full min-h-full container mx-auto ', style ? style: ''  ].join(' ')
   
   React.useEffect(()=>{
-    if(articleRef) {
-      const header = document.getElementById('nav-bar')
-      const clientHeight = header.clientHeight + 10
-      articleRef.current.style.setProperty('--nav-offsetY', clientHeight + 'px')
-    }
+  
   })
   return (
     <article ref={articleRef} className={secStyle}   >
-      <h2  className=' font-extrabold text-4xl md:text-4xl text-center pb-2 '>
+      <h2  className=' font-extrabold text-4xl md:text-4xl text-center py-4 ' data-aos="fade-down" data-aos-delay="100">
         {
           title
         }

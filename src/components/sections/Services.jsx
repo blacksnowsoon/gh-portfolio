@@ -8,18 +8,10 @@ import { FaChartLine, FaCode, FaDatabase, FaMobileAlt, FaUsers } from 'react-ico
 // const progressBar = "▰"
 
 function Services() {
-    // const [performance, setPerformance] = React.useState(false)
-    // const [accessibility, setAccessibility] = React.useState(false)
-    // const [bestPractices, setBestPractices] = React.useState(false)
-    // const [seo, setSeo] = React.useState(false)
-
-    // const progressBarStyle = (lenght)=>{
-    //     return <span data-aos="fade-down" data-aos-duration="2500" data-aos-easing="ease-in-out" className='text-green-400'>{progressBar.repeat(lenght) + '─'.repeat(10-lenght)}</span>
-    // }
 
     return (
         <Section id={'services'} className=''>
-            <Article title={'What I Offer'} style={'container'} > 
+            <Article title={'What I Offer'} style={''} > 
                 <div className="max-w-6xl">
                     <div className="text-center" data-aos="fade-down">
                         {/* <h2 className="text-4xl font-bold text-gray-800 mb-4">What I Offer</h2> */}
@@ -148,4 +140,4 @@ const services = [
                     <div>[{progressBarStyle(8)}]<span className='text-green-400'>↑</span> +75% Risk Reduction </div>  
                     <div>[{progressBarStyle(9)}]<span className='text-green-400'>↑</span> +90% Full-Stack Development </div>  
                     <div>[{progressBarStyle(8)}]<span className='text-green-400'>↑</span> +80% Stakeholder Collaboration </div>  
-                </div> */}
+    </div> */} 

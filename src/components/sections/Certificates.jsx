@@ -8,7 +8,7 @@ function Certificates() {
 
   const certificatesList = ()=> {
     return (
-      <ul className='px-14 flex flex-wrap justify-center gap-4 items-center '>
+      <ul className='flex flex-wrap justify-center gap-4 items-center '>
       {
         CERTIFICATS.map((certificate, index) => {
           return <LiCertificate data={certificate} key={index} delay={index}/>
