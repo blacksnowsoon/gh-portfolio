@@ -12,7 +12,7 @@ function Services() {
     return (
         <Section id={'services'} className=''>
             <Article title={'What I Offer'} style={''} > 
-                <div className="max-w-6xl">
+                <div className="">
                     <div className="text-center" data-aos="fade-down">
                         {/* <h2 className="text-4xl font-bold text-gray-800 mb-4">What I Offer</h2> */}
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">

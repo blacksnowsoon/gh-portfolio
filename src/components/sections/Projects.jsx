@@ -121,23 +121,7 @@ const ProjectCard = ({ card }) => {
           {card.name}
         </h3>
         
-        {/* <p className=" text-lg mb-4">
-          {card.shorts}
-        </p> */}
         
-        {/* Read More Button */}
-        {/* <div className="card-actions justify-end mt-auto">
-          {!isComingSoon && (
-            <Link 
-              to={`project/${card.id}`}
-              className="btn opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-300 gap-2"
-            >
-              Details
-              <FaArrowRight className="w-4 h-4" />
-            </Link>
-          )}
-        </div> */}
       </div>
     </div>
   );

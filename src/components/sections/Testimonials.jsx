@@ -37,6 +37,14 @@ content: "The work is now more organized and we have a reference for the faults 
 rating: 4,
 img: "testimonials/omar.png",
 },
+{
+id: 5,
+name: "Mohamed El-Sayed",
+role: "Operation Specialist, ISFP(Adabia Port Project)",
+content: "Our task management system makes our lives easier. It's easy to track task status, history and everything related in moments.",
+rating: 4,
+img: "testimonials/saied-metwally.png",
+}
 
 ];
 
