@@ -63,16 +63,16 @@ export const PROJECTS = [
         shorts: 'A custom ticket system for customer technical support department for an egyptian port ',
         description: '',
         usedLibs: [],
-        functions: ['creating the express server', 'optimize cors options & body-pareser', 'adding routes'],
-        link: 'https://github.com/blacksnowsoon/Image-Reducer-Api',
-
+        functions: ['ticket system'],
+        link: '#',
+        responsive: true,
     },
     {
         id: 7,
         name: 'Custom Task Manager',
         image: '/projects/it-tasks.jpg',
-        shorts: 'A cutom task manager for the IT department team of an egyptian port ',
-        description: 'The Image Reducer Web App provides a simple and convenient way to resize images by providing the desired width and height along with the image file',
+        shorts: 'A cutom task manager for the IT department team of an adabia port ',
+        description: 'The app aims to help the IT department team to manage their tasks and projects, enhanced reports for the team increase productivity and showing user activity',
         link: 'https://image-reducer-ui.vercel.app/',
         usedLibs: ['React', 'axios'],
         functions: ['responsive design', 'display mode', 'scroll up', 'animation', 'validating input', 'fetching data', 'Submting data'],
@@ -83,10 +83,10 @@ export const PROJECTS = [
         name: 'Custom Project Management System',
         image: '/projects/custom-project-manager.jpg',
         shorts: 'A cutom project manager for the PMIS team of an egyptian port',
-        description: '',
+        description: 'the app aims to help the application team to manage their projects and tasks, enhanced reports for the team increase productivity and showing user activity',
         link: '#',
         usedLibs: [],
-        functions: ['responsive design', 'display mode', 'scroll up', 'animation', 'validating input', 'fetching data', 'Submting data'],
+        functions: [],
         responsive: true,
     },
 
@@ -105,6 +105,8 @@ export const COMMING_SOON = [
         responsive: false,
     }
 ]
+
+
 export const CERTIFICATS = [
     {
         id: 1,
