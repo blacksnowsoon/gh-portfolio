@@ -7,7 +7,6 @@ export const Hero = () => {
     <Section id={'hero'}>
       <div className="bg-[url('/laptop-glasses.jpg')] bg-cover bg-no-repeat h-screen bg-center bg-fixed flex items-center justify-center">
         <div className="flex justify-between items-center container">
-          
           <div>
             <h2 className=" font-extrabold text-4xl md:text-4xl">
               Crafting Digital <br></br> Experiences with <br></br> Passion
@@ -34,10 +33,6 @@ export const Hero = () => {
                   </a>
                 </li>
             </ul>
-          </div>
-          <div>
-            
-
           </div>
         </div>
       </div>

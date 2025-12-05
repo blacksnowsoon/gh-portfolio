@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
-import React, { useMemo } from 'react'
-import Article from '../Article'
+import { useMemo } from 'react'
 import Section from '../Section'
+import InnerSec from '../InnerSec'
 
 const logos = [
 'html', 
@@ -30,7 +29,7 @@ const logos = [
   function Platforms() {
     const logosList = useMemo(()=>{
       return (
-        <ul className='p-4 flex flex-wrap justify-center gap-4'>
+        <ul className='p-4 flex flex-wrap justify-center gap-4 items-center '>
         {
           logos.map((logo, index)=> {
           return (
@@ -45,13 +44,11 @@ const logos = [
     },[])
     return (
       <Section id={'platforms'} className={' custom-bg '}>
-        <Article title={''} style={''} >
-          <div className='p-4 my-auto min-h-screen flex justify-center items-center flex-col '>
-            {
-              logosList
-            }
-          </div>
-        </Article>
+        <InnerSec>
+          {
+            logosList
+          }
+        </InnerSec>
       </Section>
     )
   }

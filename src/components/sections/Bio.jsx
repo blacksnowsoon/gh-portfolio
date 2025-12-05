@@ -1,60 +1,52 @@
-import React from 'react';
+
 import { FaChartLine, FaCode, FaDatabase, FaMobileAlt, FaUsers } from 'react-icons/fa';
 import Section from '../Section';
+import SectionTilte from '../SectionTilte';
 
+const services = [
+  {
+    icon: <FaChartLine className="text-3xl text-blue-600" />,
+    title: "Business Process Optimization",
+    description: "Analyze and streamline workflows using data-driven approaches. Reduced operational inefficiencies by 30% at Adabia Port through custom solutions.",
+    aos: "fade-right"
+  },
+  {
+    icon: <FaCode className="text-3xl text-purple-600" />,
+    title: "Full-Stack Development",
+    description: "Build end-to-end web applications using Frappe Framework (Python/JS), React.js, and PostgreSQL. Created a custom task management system that improved cross-department collaboration.",
+    aos: "fade-up"
+  },
+  {
+    icon: <FaDatabase className="text-3xl text-green-600" />,
+    title: "Custom ERP Solutions",
+    description: "Develop tailored business management systems with Frappe Framework. Integrated logistics modules that increased port operational efficiency by 50%.",
+    aos: "fade-left"
+  },
+  {
+    icon: <FaMobileAlt className="text-3xl text-yellow-600" />,
+    title: "Responsive Web Development",
+    description: "Design and build modern, mobile-friendly interfaces with React.js, Bootstrap, and CSS. Portfolio includes real-time monitoring dashboards and user-friendly web apps.",
+    aos: "fade-right"
+  },
+  {
+    icon: <FaUsers className="text-3xl text-red-600" />,
+    title: "Technical Consultation",
+    description: "Bridge business needs with technical solutions. Train teams on new systems and provide ongoing support for smooth digital transitions.",
+    aos: "fade-up"
+  },
+  {
+    icon: <FaCode className="text-3xl text-indigo-600" />,
+    title: "API Integration",
+    description: "Connect disparate systems through custom APIs. Integrated payment gateways and RFID devices at Adabia Port for seamless operations.",
+    aos: "fade-left"
+  }
+];
 const Services = () => {
-  const services = [
-    {
-      icon: <FaChartLine className="text-3xl text-blue-600" />,
-      title: "Business Process Optimization",
-      description: "Analyze and streamline workflows using data-driven approaches. Reduced operational inefficiencies by 30% at Adabia Port through custom solutions.",
-      aos: "fade-right"
-    },
-    {
-      icon: <FaCode className="text-3xl text-purple-600" />,
-      title: "Full-Stack Development",
-      description: "Build end-to-end web applications using Frappe Framework (Python/JS), React.js, and PostgreSQL. Created a custom task management system that improved cross-department collaboration.",
-      aos: "fade-up"
-    },
-    {
-      icon: <FaDatabase className="text-3xl text-green-600" />,
-      title: "Custom ERP Solutions",
-      description: "Develop tailored business management systems with Frappe Framework. Integrated logistics modules that increased port operational efficiency by 50%.",
-      aos: "fade-left"
-    },
-    {
-      icon: <FaMobileAlt className="text-3xl text-yellow-600" />,
-      title: "Responsive Web Development",
-      description: "Design and build modern, mobile-friendly interfaces with React.js, Bootstrap, and CSS. Portfolio includes real-time monitoring dashboards and user-friendly web apps.",
-      aos: "fade-right"
-    },
-    {
-      icon: <FaUsers className="text-3xl text-red-600" />,
-      title: "Technical Consultation",
-      description: "Bridge business needs with technical solutions. Train teams on new systems and provide ongoing support for smooth digital transitions.",
-      aos: "fade-up"
-    },
-    {
-      icon: <FaCode className="text-3xl text-indigo-600" />,
-      title: "API Integration",
-      description: "Connect disparate systems through custom APIs. Integrated payment gateways and RFID devices at Adabia Port for seamless operations.",
-      aos: "fade-left"
-    }
-  ];
-// className="py-16 px-4 bg-gray-50"
+
   return (
     <Section >
-      <div className="max-w-6xl mx-auto">
-        <div 
-          className="text-center mb-16"
-          data-aos="fade-down"
-        >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">What I Offer</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Bridging business analysis with full-stack development to deliver comprehensive solutions
-          </p>
-        </div>
-
+      <SectionTilte title="What I Offer" subtitle="Bridging business analysis with full-stack development to deliver comprehensive solutions"/>
+        <InnerSec>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
@@ -84,7 +76,7 @@ const Services = () => {
             Let's Discuss Your Project
           </button>
         </div>
-      </div>
+      </InnerSec>
     </Section>
   );
 };

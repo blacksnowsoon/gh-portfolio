@@ -3,34 +3,39 @@
 @tailwind utilities;
 
 @layer utilities {
-  
+
   html,
   :host {
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
+
   .full-up {
     background-image: conic-gradient(from 0.25turn at var(--increase) var(--decrease), var(--tw-gradient-to), 180deg, var(--tw-gradient-to), 180deg, var(--tw-gradient-from));
   }
+
   /* width */
   ::-webkit-scrollbar {
     height: 5px;
   }
+
   /* Track */
   ::-webkit-scrollbar-track {
-    border-radius: 5px; 
+    border-radius: 5px;
   }
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
     border-radius: 5px;
   }
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
   }
 
-  
+
 }
 
 .animated {
@@ -57,6 +62,7 @@ section,
 }
 
 @media (max-width: 1199px) {
+
   section,
   .section {
     scroll-margin-top: 70px;
@@ -64,19 +70,68 @@ section,
 }
 
 .custom-bg {
-  background-image: linear-gradient(
-  to bottom right,
-  oklch(80% 0.2 190 / 1),    /* Fresh cyan (replaces #06b6d4) */
-  oklch(60% 0.25 250 / 1),  /* Deep tech blue (replaces #2563eb) */
-  oklch(70% 0.2 300 / 1)  /* Vibrant purple (replaces #7c3aed) */
-  );
+  background-image: linear-gradient(to bottom right,
+      oklch(80% 0.2 190 / 1),
+      /* Fresh cyan (replaces #06b6d4) */
+      oklch(60% 0.25 250 / 1),
+      /* Deep tech blue (replaces #2563eb) */
+      oklch(70% 0.2 300 / 1)
+      /* Vibrant purple (replaces #7c3aed) */
+    );
 }
+
 .custom-bg-light {
-  background-image: linear-gradient(
-  to bottom right,
-  oklch(80% 0.2 190 / 0.7),    /* Fresh cyan (replaces #06b6d4) */
-  oklch(60% 0.25 260 / 0.7),  /* Deep tech blue (replaces #2563eb) */
-  oklch(70% 0.3 300 / 0.7)   /* Vibrant purple (replaces #7c3aed) */
-  );
+  background-image: linear-gradient(to bottom right,
+      oklch(80% 0.2 190 / 0.7),
+      /* Fresh cyan (replaces #06b6d4) */
+      oklch(60% 0.25 260 / 0.7),
+      /* Deep tech blue (replaces #2563eb) */
+      oklch(70% 0.3 300 / 0.7)
+      /* Vibrant purple (replaces #7c3aed) */
+    );
 
 }
+
+/* Modern Navbar Link Effects */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated underline effect on hover */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+      oklch(80% 0.2 190 / 1),
+      oklch(70% 0.3 300 / 1));
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::before {
+  width: 80%;
+}
+
+
+
+
+/* Underline always visible for active link */
+.nav-link-active::before {
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg,
+      oklch(80% 0.2 190 / 1),
+      oklch(60% 0.25 260 / 1),
+      oklch(70% 0.3 300 / 1));
+}
+
+/* Mobile nav link styles */
+.nav-link-mobile:hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+

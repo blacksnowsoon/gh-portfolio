@@ -1,31 +1,29 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useRef } from 'react';
+
 import { Field, Form, Formik, useFormikContext } from 'formik';
 import InputField from '../InputField';
 import TextArea from '../TextArea';
 import { contactSchema } from '../../general/Validation';
 import emailjs from '@emailjs/browser';
 import Section from '../Section';
-import Article from '../Article';
-
+import SectionTilte from '../SectionTilte';
+import InnerSec from '../InnerSec';
 import { FaMobileAlt,  FaMailBulk, FaWhatsapp, FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 
+const service_id = 'service_x9pkra8'
+const template_id = 'contact_form'
+const publicKey = '1Uggwk846OdMrpDz2'
 
 function ContactForm() {
 
   const onSubmit = (values, actions) => {
-  
-    const service_id = 'service_x9pkra8'
-    const template_id = 'contact_form'
-    const publicKey = '1Uggwk846OdMrpDz2'
-    const emailTemplate = {
-      user_name: values?.name,
-      user_email: values?.email,
-      time: new Date().toLocaleString(),
-      message: values?.message,
-      subject: values?.subject
-    }
+  const emailTemplate = {
+    user_name: values?.name,
+    user_email: values?.email,
+    time: new Date().toLocaleString(),
+    message: values?.message,
+    subject: values?.subject
+  }
 
     emailjs.send(service_id, template_id,emailTemplate, publicKey)
     .then(() => {
@@ -40,8 +38,8 @@ function ContactForm() {
   }
   return (
     <Section id={"contact"} className={''}>
-      
-      <Article title="Contact Me" style="">
+    <SectionTilte title={'Contact'} />
+      <InnerSec  >
         <div className='flex flex-wrap justify-start items-start gap-2 '>
         {/* contact info */}
           <div className='md:flex-1'>
@@ -100,7 +98,7 @@ function ContactForm() {
             </Formik>
           </div>
         </div>
-      </Article>
+      </InnerSec>
       
     </Section>
   )

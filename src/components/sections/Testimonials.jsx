@@ -1,8 +1,9 @@
 import { useRef } from 'react'
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
 import Section from './../Section';
-import Article from './../Article';
 import Slider from "react-slick";
+import SectionTilte from '../SectionTilte';
+import InnerSec from '../InnerSec';
 
 const testimonials = [
 {
@@ -66,46 +67,47 @@ export default function Testimonials() {
 
     return (
         <Section id={'testimonials'} className={'custom-bg'} >
-            <Article title={"What People Say"} style={'text-white'}>
-                <div className='slider-container' >
-                    <Slider ref={sliderRef} {...settings} className='p-2 '>
-                        {testimonials.map((testimonial) => (
-                            <div 
-                                key={testimonial.id} 
-                                className=" w-full snap-start flex-shrink-0  border border-white border-opacity-40 shadow-xl  backdrop-blur-sm space-x-4 p-4"
-                                data-aos="zoom-in"
-                            >
-                                <div className="flex flex-col md:flex-row items-center justify-center gap-4 p-8 ">
-                                    <div className='min-w-[80px] min-h-[80px] flex justify-center items-center'>
-                                        <img 
-                                            loading='lazy'
-                                            src={`/${testimonial.img}`} 
-                                            alt={testimonial.name} 
-                                            className="w-20 h-20 rounded-full mb-4" 
-                                        />
-                                    </div>
-                                    <div>
-                                        <FaQuoteLeft className="text-white text-2xl opacity-70 mb-4" />
-                                        <p className="text-white text-opacity-90 mb-6">
-                                            {testimonial.content}
-                                        </p>
-                                        <div className="flex items-center mb-2">
-                                            {Array.from({ length: testimonial?.rating || 0 }).map((_,i) => (
-                                                <FaStar 
-                                                    key={i} 
-                                                    className={`text-${i < testimonial.rating ? 'yellow-400' : 'gray-300'} text-sm`} 
-                                                />
-                                            ))}
+            <SectionTilte title={"What People Say"} />
+                <InnerSec>
+                    <div className='slider-container' >
+                        <Slider ref={sliderRef} {...settings} className='p-6 md:p-10 xl:p-20'>
+                            {testimonials.map((testimonial) => (
+                                <div 
+                                    key={testimonial.id} 
+                                    className="w-full snap-start flex-shrink-0  border border-white border-opacity-40 shadow-xl  backdrop-blur-sm space-x-4 px-10"
+                                    data-aos="zoom-in"
+                                >
+                                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 p-8 ">
+                                        <div className='min-w-[80px] min-h-[80px] flex justify-center items-center'>
+                                            <img 
+                                                loading='lazy'
+                                                src={`/${testimonial.img}`} 
+                                                alt={testimonial.name} 
+                                                className="w-20 h-20 rounded-full mb-4" 
+                                            />
                                         </div>
-                                        <h3 className="text-white font-bold">{testimonial.name}</h3>
-                                        <p className="text-white text-opacity-70 text-sm">{testimonial.role}</p>
+                                        <div>
+                                            <FaQuoteLeft className="text-white text-2xl opacity-70 mb-4" />
+                                            <p className="text-white text-opacity-90 mb-6">
+                                                {testimonial.content}
+                                            </p>
+                                            <div className="flex items-center mb-2">
+                                                {Array.from({ length: testimonial?.rating || 0 }).map((_,i) => (
+                                                    <FaStar 
+                                                        key={i} 
+                                                        className={`text-${i < testimonial.rating ? 'yellow-400' : 'gray-300'} text-sm`} 
+                                                    />
+                                                ))}
+                                            </div>
+                                            <h3 className="text-white font-bold">{testimonial.name}</h3>
+                                            <p className="text-white text-opacity-70 text-sm">{testimonial.role}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-            </Article>
+                            ))}
+                        </Slider>
+                    </div>
+                </InnerSec>
         </Section>
     );
 }
