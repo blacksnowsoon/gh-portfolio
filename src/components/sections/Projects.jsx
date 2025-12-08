@@ -1,11 +1,12 @@
 
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { PROJECTS } from '../../Data'
 import Section from '../Section'
 import SectionTilte from '../SectionTilte';
 import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
 import Captions from "yet-another-react-lightbox/plugins/captions";
+import Share from "yet-another-react-lightbox/plugins/share";
+import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 
@@ -15,7 +16,49 @@ function Projects() {
 
   const slides = useMemo(() => PROJECTS.map(project => ({
     src: project.image,
-    title: project.name,
+    title: (
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <span>{project.name}</span>
+        {project.link && project.link !== '#' && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Visit Project"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              color: 'inherit',
+              textDecoration: 'none',
+              opacity: 0.8,
+              transition: 'opacity 0.2s'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '0.8'}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        )}
+      </div>
+    ),
+    share: {
+      url: project.link,
+    },
     description: project.shorts + (project.description ? " - " + project.description : ""),
   })), []);
 
@@ -48,7 +91,7 @@ function Projects() {
         close={() => setOpen(false)}
         index={index}
         slides={slides}
-        plugins={[Captions]}
+        plugins={[Captions, Share]}
       />
     </Section>
   )
