@@ -122,31 +122,38 @@ export const COMMING_SOON = [
 export const CERTIFICATS = [
     {
         id: 1,
+        name: 'ERP Systems',
+        pdf: '/certificates/ERP.png',
+    },
+    {
+        id: 2,
         name: 'JavaScript',
         pdf: '/certificates/javascript.webp',
     },
     {
-        id: 2,
+        id: 3
+        
+        ,
         name: 'SQL',
         pdf: '/certificates/sql.webp',
     },
     {
-        id: 3,
+        id: 4,
         name: 'React',
         pdf: '/certificates/react-2.webp',
     },
     {
-        id: 4,
+        id: 5,
         name: 'Frontend',
         pdf: '/certificates/frontEnd.webp',
     },
     {
-        id: 5,
+        id: 6,
         name: 'HTML - CSS',
         pdf: '/certificates/HTML.webp',
     },
     {
-        id: 6,
+        id: 7,
         name: 'React',
         pdf: '/certificates/react-1.webp',
     }
