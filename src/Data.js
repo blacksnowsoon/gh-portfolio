@@ -128,33 +128,31 @@ export const CERTIFICATS = [
     {
         id: 2,
         name: 'JavaScript',
-        pdf: '/certificates/javascript.webp',
+        pdf: '/certificates/javascript.png',
     },
     {
-        id: 3
-        
-        ,
+        id: 3,
         name: 'SQL',
-        pdf: '/certificates/sql.webp',
+        pdf: '/certificates/sql.png',
     },
     {
         id: 4,
         name: 'React',
-        pdf: '/certificates/react-2.webp',
+        pdf: '/certificates/react-2.png',
     },
     {
         id: 5,
         name: 'Frontend',
-        pdf: '/certificates/frontEnd.webp',
+        pdf: '/certificates/frontEnd.png',
     },
     {
         id: 6,
         name: 'HTML - CSS',
-        pdf: '/certificates/HTML.webp',
+        pdf: '/certificates/HTML.png',
     },
     {
         id: 7,
         name: 'React',
-        pdf: '/certificates/react-1.webp',
+        pdf: '/certificates/react-1.png',
     }
 ]

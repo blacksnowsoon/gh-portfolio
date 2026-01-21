@@ -1,30 +1,46 @@
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
 import { CERTIFICATS } from '../../Data'
 import Section from '../Section'
 import SectionTilte from '../SectionTilte'
 import InnerSec from '../InnerSec'
-
+import Slider from "react-slick";
 function Certificates() {
+  let sliderRef = useRef(null);
+  const settings = {
+        dots: true,
+        lazyLoad: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 2
+    };
 
-
-  const certificatesList = () => {
-    return (
-      <ul className='flex flex-wrap justify-center gap-4 items-center '>
-        {
-          CERTIFICATS.map((certificate, index) => {
-            return <LiCertificate data={certificate} key={index} delay={index} />
-          })
-        }
-      </ul>
-    )
-  }
+ 
   return (
     <Section id={'certificates'} className={''}>
       <SectionTilte title={"Achieved Certificates"} />
         <InnerSec>
-          {
-            certificatesList()
-          }
+        <div>
+
+          <Slider ref={sliderRef} {...settings} className='p-6 md:p-10 xl:p-20'>
+            {CERTIFICATS.map((cert) => (
+              <div 
+                key={cert.id} 
+                className="w-full snap-start flex-shrink-0  border border-white border-opacity-40 shadow-xl  backdrop-blur-sm space-x-4 px-10"
+                data-aos="zoom-in">
+                  <div className=' flex justify-center items-center'>
+                    <img 
+                        loading='lazy'
+                        src={`${cert.pdf}`} 
+                        alt={cert.name} 
+                        className="" 
+                    />
+                  </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
         </InnerSec>
     </Section>
   )
