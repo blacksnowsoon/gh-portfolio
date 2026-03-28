@@ -67,7 +67,7 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <div className="relative flex flex-col md:flex-row justify-between items-start md:items-start w-full gap-10 md:gap-4">
+          <div className="relative flex flex-col md:flex-row justify-between items-start md:items-stretch w-full gap-10 md:gap-4">
             
             {/* Horizontal Line Desktop */}
             <div className="hidden md:block absolute top-[30px] left-0 w-full h-[4px] bg-gray-200"></div>
@@ -93,7 +93,7 @@ const AboutMe = () => {
                   </div>
 
                   {/* Card Component */}
-                  <div className={`mt-0 md:mt-8 ml-20 md:ml-0 bg-white p-6 rounded-xl shadow-lg border-t-4 ${borders[index]} w-[calc(100%-80px)] md:w-[90%] hover:-translate-y-2 transition-transform duration-300 relative text-left`}>
+                  <div className={`mt-0 md:mt-8 ml-20 md:ml-0 bg-white p-6 rounded-xl shadow-lg border-t-4 ${borders[index]} w-[calc(100%-80px)] md:w-[90%] hover:-translate-y-2 transition-transform duration-300 relative text-left h-full flex flex-col`}>
                     
                     <h4 className="text-xl font-bold text-gray-800 md:text-center mb-1">{item.title}</h4>
                     <p className={`text-sm font-semibold mb-5 md:text-center ${texts[index]}`}>{item.subtitle}</p>
@@ -107,7 +107,7 @@ const AboutMe = () => {
                       ))}
                     </ul>
 
-                    <div className={`w-full text-xs font-bold leading-tight ${texts[index]} ${bgs[index]} px-4 py-3 rounded-lg md:text-center shadow-inner`}>
+                    <div className={`mt-auto w-full text-xs font-bold leading-tight ${texts[index]} ${bgs[index]} px-4 py-3 rounded-lg md:text-center shadow-inner`}>
                       {item.insight}
                     </div>
                   </div>
