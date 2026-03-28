@@ -1,0 +1,23 @@
+Section Title
+What I Do
+
+Designing and optimizing mission-critical systems by bridging business operations, technology, and product thinking
+
+🔵 Card 1 — Business Analysis
+Business Analysis & Process Design
+Lead requirements elicitation using structured techniques (BPMN, Root Cause Analysis)
+Model and optimize operational workflows (AS-IS / TO-BE)
+Identify system gaps and define functional solutions aligned with real business needs
+Translate complex operations into scalable system behavior
+🟡 Card 2 — Systems & Operations
+Systems Analysis & Operational Support
+Ensure stability of mission-critical port systems across terminals and devices (RFID, POS, Scales)
+Act as escalation point for production issues, resolving high-impact incidents
+Support integrations with external systems (Nafaza / MSW)
+Maintain operational continuity in high-volume, real-time environments
+🟢 Card 3 — Product Ownership
+Product Ownership & Delivery
+Own backlog and define system behavior based on business priorities
+Lead UAT cycles and release processes (Patch → Production)
+Evaluate system impact and manage change requests
+Align stakeholders, technical teams, and operations to deliver measurable value

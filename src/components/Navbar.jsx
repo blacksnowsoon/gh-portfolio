@@ -43,7 +43,7 @@ const Navbar = () => {
     const navItems = [
         { id: 'about-me', label: 'About Me' },
         { id: 'services', label: 'Services' },
-        { id: 'projects', label: 'Projects' },
+        { id: 'case-studies', label: 'Case Studies' },
         { id: 'certificates', label: 'Certificates' },
         { id: 'contact', label: 'Contact' }
     ];

@@ -8,13 +8,12 @@ export const Hero = () => {
       <div className="bg-[url('/laptop-glasses.jpg')] bg-cover bg-no-repeat h-screen bg-center bg-fixed flex items-center justify-center">
         <div className="flex justify-between items-center container">
           <div>
-            <h2 className=" font-extrabold text-4xl md:text-4xl">
-              Crafting Digital <br></br> Experiences with <br></br> Passion
-                
+            <h2 className=" font-extrabold text-4xl md:text-5xl leading-tight">
+              Business Analyst <span className="text-blue-500">|</span> <br></br> Functional Consultant <span className="text-blue-500">|</span> <br></br> Product Owner
             </h2>
             <br></br>
-            <h2 className="text-lg ">
-            Transforming ideas into elegant solutions through creative <br></br> design and innovative development
+            <h2 className="text-lg mt-4 max-w-2xl text-gray-700 font-medium">
+            My product decisions are grounded in real operational experience, not assumptions.
             </h2>
             <ul className=" flex gap-3 mt-2">
                 <li data-aos="fade-right"  className="">

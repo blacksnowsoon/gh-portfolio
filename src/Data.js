@@ -1,107 +1,106 @@
 /* eslint-disable react-refresh/only-export-components */
 export const PROJECTS = [
     {
-        id: 1,
-        name: 'Kitchens Catalog',
-        image: '/projects/kitchens-catalog.jpg',
-        shorts: 'A Portfolio for an aluminum workshop with 3D Catalog for kitchens with a good UI',
-        description: 'the site aims to show the brand visual identity and the 3D models of the kitchens',
-        link: 'https://gosmart-3d-catalog.vercel.app/',
-        usedLibs: [],
-        functions: [],
-        responsive: true,
+        id: "case-1",
+        image: "/truckScaleIntegration.jpg",
+        title: "Streamlining Truck Scale Integration Across Terminals",
+        shorts: "Unifying TCP configurations across 11 truck scales to a single scalable architecture.",
+        tags: ["Integration", "Optimization", "Workflow"],
+        theme: "blue",
+        context: "The port system integrates with multiple truck scales across terminals to capture weight data for billing and operational processing. Each scale required its own TCP configuration, creating a complex and fragmented setup.",
+        problem: [
+            "High setup and maintenance effort",
+            "Increased risk of configuration errors",
+            "Limited scalability when adding new terminals",
+            "Delays in onboarding new equipment"
+        ],
+        role: [
+            "Analyzed communication patterns between the system and scales",
+            "Identified redundancy in TCP configuration logic",
+            "Collaborated with technical teams to define a scalable solution",
+            "Translated operational requirements into system behavior"
+        ],
+        solution: [
+            "Dynamic handling of multiple scales through a single configuration layer",
+            "Centralized management of communication settings",
+            "Simplified onboarding of new devices"
+        ],
+        impact: [
+            "Reduced configuration time by ~75%",
+            "Improved system scalability across terminals",
+            "Minimized configuration errors",
+            "Simplified maintenance and support operations"
+        ],
+        takeaway: "Simplifying integration layers in complex systems significantly improves scalability and operational efficiency."
     },
     {
-        id: 2,
-        name: '3D Building Booklet',
-        image: '/projects/3d-building-booklet.jpg',
-        shorts: 'A 3D Building Booklet with a good UI',
-        description: 'A fully responsive website showing the building features, location and services with ready to download the building booklet in pdf format and 3d models',
-        usedLibs: ['Vitejs-react', 'aos', 'tailwind', 'daisyui', 'react-icons', 'react-router-dom'],
-        functions: ['sections animations', 'sending emails', 'responsive', ''],
-        link: 'https://aly-moaaz.vercel.app/',
-        responsive: true,
-        screenshots: [],
+        id: "case-2",
+        image: "/ExportReturns.jpg",
+        title: "Designing a Reliable Export Returns Workflow",
+        shorts: "Re-engineered functional flow to eliminate manual entry errors in export returns processing.",
+        tags: ["Process Design", "Data Integrity", "Workflow"],
+        theme: "green",
+        context: "Export containers occasionally required returns processing due to customs or operational constraints. The existing system lacked a structured workflow to handle these cases effectively.",
+        problem: [
+            "No clear system support for export returns",
+            "Data inconsistencies across workflows",
+            "Manual interventions leading to errors",
+            "Lack of traceability in the process"
+        ],
+        role: [
+            "Conducted deep-dive sessions with stakeholders",
+            "Mapped current (AS-IS) processes and identified gaps",
+            "Designed a structured (TO-BE) workflow",
+            "Defined validation rules and system logic"
+        ],
+        solution: [
+            "Clear process stages and system states",
+            "Data validation mechanisms to ensure consistency",
+            "Integration with existing modules to maintain flow continuity",
+            "User-friendly process handling within the system"
+        ],
+        impact: [
+            "Ensured 100% data integrity across export return transactions",
+            "Reduced manual errors and inconsistencies",
+            "Improved traceability and operational visibility",
+            "Enhanced user confidence in system workflows"
+        ],
+        takeaway: "Well-structured workflows are essential for maintaining data integrity and operational clarity in complex systems."
     },
     {
-        id: 3,
-        name: 'Sketto Cafe',
-        image: '/projects/sketto-cafe.jpg',
-        shorts: 'An Elegant cafe website with a good UI and a showing the brand visual identity',
-        description: ', A fully responsive website in 4 pages representing the brand idientity ',
-        usedLibs: ['javescript', 'html', 'css', 'bootstrap'],
-        functions: ['responsive design', 'scroll up', 'display mode'],
-        link: 'https://classic-coffee.vercel.app/',
-        responsive: false,
-    },
-    {
-        id: 4,
-        name: 'Go Smart Soultions',
-        image: '/projects/go-smart.jpg',
-        shorts: 'Portfolio for a Software Services and Degital Transformation Company ',
-        description: '',
-        usedLibs: ['Vitejs-react', 'react-router-hash-link'],
-        functions: ['display mode', 'infinit sliders'],
-        link: '#',
-        responsive: true,
-    },
-    {
-        id: 5,
-        name: 'Logistics',
-        image: '/projects/logis.jpg',
-        shorts: 'A protfolio A Logistics company shows location and services with conatct form.',
-        description: '',
-        usedLibs: ['reactjs', 'firebase', 'firestore', 'firebase storage', 'prop-types', 'react-query', 'react-hook-form'],
-        functions: ['google Signin', 'creating admin dashboard', 'reading files', 'upload images', 'validating forms', 'save user data', 'paginate', 'firebase hosting', 'authorization'],
-        link: '#',
-        responsive: true,
-    },
-    {
-        id: 6,
-        name: 'Landing Page',
-        image: '/projects/landing-page.jpg',
-        shorts: 'A landing page for a course registration connected to firebase',
-        description: '',
-        usedLibs: [],
-        functions: ['responsive design', 'dynamic nav bar', 'manipulating DOM'],
-        link: 'https://go-smart-solutions.vercel.app/',
-        responsive: true,
-    },
-    {
-        id: 7,
-        name: 'Custom Ticket System',
-        image: '/projects/custom-app-customer-support.jpg',
-        shorts: 'A custom ticket system for customer technical support department for an egyptian port ',
-        description: '',
-        usedLibs: [],
-        functions: ['ticket system'],
-        link: 'https://github.com/blacksnowsoon/adabia_port',
-        responsive: true,
-    },
-    {
-        id: 8,
-        name: 'Custom Task Manager',
-        image: '/projects/it-tasks.jpg',
-        shorts: 'A cutom task manager for the IT department team of an adabia port ',
-        description: 'The app aims to help the IT department team to manage their tasks and projects, enhanced reports for the team increase productivity and showing user activity',
-        link: 'https://github.com/blacksnowsoon/adabia_port',
-        usedLibs: [],
-        functions: ['ticket system'],
-        responsive: true,
-    },
-    {
-        id: 9,
-        name: 'Custom Project Management System',
-        image: '/projects/custom-project-manager.jpg',
-        shorts: 'A cutom project manager for the PMIS team of an egyptian port',
-        description: 'the app aims to help the application team to manage their projects and tasks, enhanced reports for the team increase productivity and showing user activity',
-        link: 'https://github.com/blacksnowsoon/adabia_port',
-        usedLibs: [],
-        functions: [],
-        responsive: true,
-    },
-    
-
+        id: "case-3",
+        image: "/TruckImpoundment.jpg",
+        title: "Building a Structured Truck Impoundment System",
+        shorts: "Decoupled state management model for legal compliance and operational tracking.",
+        tags: ["Compliance", "System Architecture", "Governance"],
+        theme: "purple",
+        context: "Truck impoundment is a critical process involving compliance, billing, and operational tracking. The system initially lacked a standardized way to handle impounded trucks.",
+        problem: [
+            "No centralized workflow for impoundment",
+            "Limited visibility on truck status",
+            "Inconsistent handling across teams",
+            "Difficulty in enforcing compliance rules"
+        ],
+        role: [
+            "Facilitated workshops with operations, billing, and compliance teams",
+            "Defined business rules and edge cases",
+            "Designed system architecture for the process",
+            "Ensured alignment between stakeholders and technical teams"
+        ],
+        solution: [
+            "Defined lifecycle states for impounded trucks",
+            "Automated validation and rule enforcement",
+            "Integration with billing and operational modules",
+            "Clear tracking and reporting capabilities"
+        ],
+        impact: [
+            "Standardized impoundment handling across all terminals",
+            "Improved compliance and auditability",
+            "Reduced process ambiguity and manual handling",
+            "Enabled better monitoring and reporting of impounded trucks"
+        ],
+        takeaway: "Designing structured system workflows enables better governance, compliance, and operational control."
+    }
 ]
 export const COMMING_SOON = [
     {
@@ -156,3 +155,37 @@ export const CERTIFICATS = [
         pdf: '/certificates/react-1.png',
     }
 ]
+
+
+export const timeline = [
+  {
+    title: "Operational System Support",
+    subtitle: "Systems Support Analyst (2021–2023)",
+    points: [
+      "Supported RFID, POS, Scales in port operations",
+      "Maintained system stability",
+      "Resolved live incidents"
+    ],
+    insight: "Learned how systems fail in real-world operations"
+  },
+  {
+    title: "Business Analysis & Process Optimization",
+    subtitle: "Business Analyst (2023–Present)",
+    points: [
+      "Modeled workflows using BPMN",
+      "Led requirements elicitation",
+      "Optimized system processes"
+    ],
+    insight: "Shifted from solving issues to understanding root causes"
+  },
+  {
+    title: "Product Ownership & System Design",
+    subtitle: "Product Owner / Functional Lead",
+    points: [
+      "Owned backlog and workflows",
+      "Led UAT and releases",
+      "Defined system behavior"
+    ],
+    insight: "Driving system evolution based on real operational needs"
+  }
+];

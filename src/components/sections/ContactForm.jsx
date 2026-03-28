@@ -68,7 +68,7 @@ function ContactForm() {
           </div>
         {/* send email */}
           <div className='md:flex-1'>
-            <p className='text-xl font-bold text-center p-3'>You can also contact me by email</p>
+            <p className='text-xl font-bold text-center p-3'>You can also contact me via email</p>
             <Formik
               initialValues={{ name: "", email: "", subject: "", message: "" }}
               onSubmit={onSubmit}

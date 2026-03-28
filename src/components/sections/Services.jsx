@@ -5,39 +5,42 @@ import { FaChartLine, FaCode, FaDatabase, FaMobileAlt, FaUsers } from 'react-ico
 
 const services = [
     {
-        icon: <FaChartLine className="text-3xl text-blue-600" />,
-        title: "Business Process Optimization",
-        description: "Analyze and streamline workflows using data-driven approaches. Reduced operational inefficiencies by 30% at Adabia Port through custom solutions.",
+        icon: <FaChartLine className="text-4xl text-blue-600" />,
+        borderColor: "hover:border-blue-500",
+        bulletColor: "bg-blue-600",
+        title: "Business Analysis & Process Design",
+        points: [
+            "Lead requirements elicitation using structured techniques (BPMN, Root Cause Analysis)",
+            "Model and optimize operational workflows (AS-IS / TO-BE)",
+            "Identify system gaps and define functional solutions aligned with real business needs",
+            "Translate complex operations into scalable system behavior"
+        ],
         aos: "fade-right"
     },
     {
-        icon: <FaCode className="text-3xl text-purple-600" />,
-        title: "Full-Stack Development",
-        description: "Build end-to-end web applications using Frappe Framework (Python/JS), React.js, and MySQL. Created a custom task management system that improved cross-department collaboration.",
+        icon: <FaDatabase className="text-4xl text-yellow-500" />,
+        borderColor: "hover:border-yellow-500",
+        bulletColor: "bg-yellow-500",
+        title: "Systems Analysis & Operational Support",
+        points: [
+            "Ensure stability of mission-critical port systems across terminals and devices (RFID, POS, Scales)",
+            "Act as escalation point for production issues, resolving high-impact incidents",
+            "Support integrations with external systems (Nafaza / MSW)",
+            "Maintain operational continuity in high-volume, real-time environments"
+        ],
         aos: "fade-up"
     },
     {
-        icon: <FaDatabase className="text-3xl text-green-600" />,
-        title: "Custom ERP Solutions",
-        description: "Develop tailored business management systems with Frappe Framework. Integrated logistics modules that increased port operational efficiency by 50%.",
-        aos: "fade-left"
-    },
-    {
-        icon: <FaMobileAlt className="text-3xl text-yellow-600" />,
-        title: "Responsive Web Development",
-        description: "Design and build modern, mobile-friendly interfaces with React.js, Bootstrap, and CSS. Portfolio includes real-time monitoring dashboards and user-friendly web apps.",
-        aos: "fade-right"
-    },
-    {
-        icon: <FaUsers className="text-3xl text-red-600" />,
-        title: "Technical Consultation",
-        description: "Bridge business needs with technical solutions. Train teams on new systems and provide ongoing support for smooth digital transitions.",
-        aos: "fade-up"
-    },
-    {
-        icon: <FaCode className="text-3xl text-indigo-600" />,
-        title: "API Integration",
-        description: "Connect disparate systems through custom APIs. Integrated payment gateways and RFID devices with PMIS & ERP systems.",
+        icon: <FaUsers className="text-4xl text-green-600" />,
+        borderColor: "hover:border-green-500",
+        bulletColor: "bg-green-600",
+        title: "Product Ownership & Delivery",
+        points: [
+            "Own backlog and define system behavior based on business priorities",
+            "Lead UAT cycles and release processes (Patch → Production)",
+            "Evaluate system impact and manage change requests",
+            "Align stakeholders, technical teams, and operations to deliver measurable value"
+        ],
         aos: "fade-left"
     }
 ];
@@ -46,12 +49,12 @@ function Services() {
 
     return (
         <Section id={'services'} className=''>
-            <SectionTilte title={'What I Offer'} />
+            <SectionTilte title={'What I Do'} />
                 <InnerSec>
                     <div className="">
                         <div className="text-center" data-aos="fade-down">
-                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                                Bridging business analysis with full-stack development to deliver comprehensive solutions
+                            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                                Designing and optimizing mission-critical systems by bridging business operations, technology, and product thinking
                             </p>
                         </div>
 
@@ -59,15 +62,22 @@ function Services() {
                             {services.map((service, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-transparent hover:border-blue-500"
+                                    className={`bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-transparent ${service.borderColor}`}
                                     data-aos={service.aos}
                                     data-aos-delay={index * 100}
                                 >
                                     <div className="mb-4">
                                         {service.icon}
                                     </div>
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                                    <p className="text-gray-600">{service.description}</p>
+                                    <h3 className="text-xl font-semibold text-gray-800 mb-4">{service.title}</h3>
+                                    <ul className="text-gray-600 text-sm space-y-3 list-none">
+                                        {service.points.map((pt, i) => (
+                                          <li key={i} className="flex gap-3 items-start">
+                                            <span className={`mt-1.5 h-1.5 w-1.5 rounded-full ${service.bulletColor} shrink-0`}></span>
+                                            <span className="leading-snug text-left">{pt}</span>
+                                          </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             ))}
                         </div>

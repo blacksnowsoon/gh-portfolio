@@ -1,0 +1,33 @@
+-Layout
+
+A horizontal timeline (desktop) + vertical (mobile)
+
+[ Support ] ───────▶ [ Business Analysis ] ───────▶ [ Product Ownership ]
+   2021–2023             2023–Present                    Present
+
+Each stage = card with depth, not just title.
+
+-Add progression indicators
+
+Under the timeline:
+
+Support → Stability Focus
+BA → Understanding & Optimization
+PO → Ownership & Decision Making
+
+-Add icons (simple but powerful)
+🛠️ Support
+📊 BA
+🚀 PO
+
+-Add subtle animation
+Cards fade-in from left → right
+Line fills progressively (like progress bar)
+
+-Add a headline above the timeline:
+
+🚀 From Support to Product Ownership
+
+Then a one-liner:
+
+“A journey from resolving operational issues to owning product decisions in a mission-critical port system.”
